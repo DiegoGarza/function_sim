@@ -14,6 +14,7 @@
 		7E74F0961AC09A7200639AB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E74F0951AC09A7200639AB3 /* Images.xcassets */; };
 		7E74F0991AC09A7200639AB3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E74F0971AC09A7200639AB3 /* LaunchScreen.xib */; };
 		7E74F0A51AC09A7200639AB3 /* function_simTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74F0A41AC09A7200639AB3 /* function_simTests.m */; };
+		7ECBAD631AC393A90060AC71 /* Inconsolata.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7ECBAD621AC393A90060AC71 /* Inconsolata.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		7E74F09E1AC09A7200639AB3 /* function_simTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = function_simTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E74F0A31AC09A7200639AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E74F0A41AC09A7200639AB3 /* function_simTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = function_simTests.m; sourceTree = "<group>"; };
+		7ECBAD621AC393A90060AC71 /* Inconsolata.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inconsolata.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		7E74F0881AC09A7200639AB3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7ECBAD621AC393A90060AC71 /* Inconsolata.otf */,
 				7E74F0891AC09A7200639AB3 /* Info.plist */,
 				7E74F08A1AC09A7200639AB3 /* main.m */,
 			);
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E74F0941AC09A7200639AB3 /* Main.storyboard in Resources */,
+				7ECBAD631AC393A90060AC71 /* Inconsolata.otf in Resources */,
 				7E74F0991AC09A7200639AB3 /* LaunchScreen.xib in Resources */,
 				7E74F0961AC09A7200639AB3 /* Images.xcassets in Resources */,
 			);
@@ -412,6 +416,7 @@
 				7E74F0AA1AC09A7200639AB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E74F0AB1AC09A7200639AB3 /* Build configuration list for PBXNativeTarget "function_simTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				7E74F0AD1AC09A7200639AB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
