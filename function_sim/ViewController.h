@@ -10,6 +10,12 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *iMemory;
+@property (weak, nonatomic) IBOutlet UIImageView *iArrow;
+- (IBAction)btNext:(id)sender;
+- (IBAction)btPlay:(id)sender;
+- (IBAction)btBack:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *lbFunction;
 @end
 
