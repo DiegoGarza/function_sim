@@ -34,6 +34,36 @@
             <string>Inconsolata</string>
             <string>Inconsolata</string>
             <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
+            <string>Inconsolata</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -56,7 +86,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="int" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AZ-Pq-pVB">
-                                <rect key="frame" x="67" y="57" width="42" height="22"/>
+                                <rect key="frame" x="67" y="78" width="42" height="22"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.88960408209999997" blue="0.64254102040000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -68,49 +98,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="int" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MC-Rx-G6t">
-                                <rect key="frame" x="294" y="24" width="39" height="30"/>
+                                <rect key="frame" x="304" y="24" width="39" height="30"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.88960408209999997" blue="0.64254102040000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aaa," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jd-i4-2HE">
-                                <rect key="frame" x="241" y="26" width="52" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aaa" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jd-i4-2HE">
+                                <rect key="frame" x="240" y="25" width="49" height="27"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="result;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mws-ao-M1F">
-                                <rect key="frame" x="161" y="176" width="91" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="result" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mws-ao-M1F">
+                                <rect key="frame" x="161" y="197" width="78" height="27"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="result;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zT8-d8-tAa">
-                                <rect key="frame" x="121" y="54" width="91" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="result" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpA-77-LJ5">
+                                <rect key="frame" x="67" y="167" width="78" height="27"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aaa = aaa + 10;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxF-Z1-poC">
-                                <rect key="frame" x="68" y="83" width="195" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bbb" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AH0-tO-bj8">
+                                <rect key="frame" x="351" y="24" width="52" height="31"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bbb){" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AH0-tO-bj8">
-                                <rect key="frame" x="344" y="23" width="65" height="31"/>
-                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bbb = bbb + 20;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-M0-9c9">
-                                <rect key="frame" x="69" y="112" width="195" height="31"/>
-                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="result = aaa + bbb;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0u-hN-Knn">
-                                <rect key="frame" x="68" y="143" width="247" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=")" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unY-Br-7au">
+                                <rect key="frame" x="402" y="23" width="20" height="31"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -122,13 +140,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="function" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFW-3i-MXX">
-                                <rect key="frame" x="74" y="23" width="150" height="31"/>
+                                <rect key="frame" x="74" y="23" width="105" height="31"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.73744158643741686" blue="0.52974503983114762" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="return" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJv-KF-MNw">
-                                <rect key="frame" x="67" y="174" width="83" height="31"/>
+                                <rect key="frame" x="67" y="195" width="83" height="31"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" red="0.4692172034506682" green="0.80815724012914358" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -139,61 +157,85 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="int" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RU2-XA-2rU">
-                                <rect key="frame" x="22" y="253" width="42" height="22"/>
+                                <rect key="frame" x="22" y="274" width="42" height="22"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.88960408209999997" blue="0.64254102040000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="function" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLn-W8-usJ">
-                                <rect key="frame" x="147" y="370" width="104" height="27"/>
+                                <rect key="frame" x="147" y="414" width="104" height="27"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.88960408209999997" blue="0.64254102040000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="int" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2O-oh-nRF">
-                                <rect key="frame" x="67" y="283" width="42" height="22"/>
+                                <rect key="frame" x="67" y="327" width="42" height="22"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.88960408209999997" blue="0.64254102040000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="}" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIH-6t-aY5">
-                                <rect key="frame" x="22" y="396" width="26" height="27"/>
+                                <rect key="frame" x="22" y="441" width="26" height="27"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ccc =" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWm-gX-3Kn">
-                                <rect key="frame" x="68" y="370" width="65" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ccc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWm-gX-3Kn">
+                                <rect key="frame" x="68" y="414" width="39" height="27"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aaa = 0;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cy-qr-3Dg">
-                                <rect key="frame" x="67" y="309" width="104" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="=" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOV-2e-onR">
+                                <rect key="frame" x="120" y="414" width="13" height="27"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="){" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXS-5g-hpT">
-                                <rect key="frame" x="145" y="248" width="26" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aaa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cy-qr-3Dg">
+                                <rect key="frame" x="69" y="353" width="39" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aaa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDI-pX-q7t">
+                                <rect key="frame" x="269" y="414" width="39" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=")" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXS-5g-hpT">
+                                <rect key="frame" x="145" y="270" width="26" height="31"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="{" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-JH-cIQ">
+                                <rect key="frame" x="22" y="297" width="26" height="31"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="{" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLU-hC-0n7">
+                                <rect key="frame" x="22" y="49" width="26" height="31"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHz-03-XZk">
-                                <rect key="frame" x="130" y="249" width="26" height="31"/>
+                                <rect key="frame" x="130" y="270" width="26" height="31"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(aaa, bbb);" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZU-tJ-XIf">
-                                <rect key="frame" x="253" y="368" width="143" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZU-tJ-XIf">
+                                <rect key="frame" x="253" y="412" width="11" height="31"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bbb = 0;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQx-rf-56G">
-                                <rect key="frame" x="68" y="339" width="143" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=")" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJf-Df-qBE">
+                                <rect key="frame" x="366" y="412" width="13" height="31"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -204,19 +246,55 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="}" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJV-vs-inu">
-                                <rect key="frame" x="22" y="202" width="26" height="27"/>
+                                <rect key="frame" x="22" y="223" width="26" height="27"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="main" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRe-Iw-2l7">
-                                <rect key="frame" x="71" y="251" width="52" height="27"/>
+                                <rect key="frame" x="71" y="272" width="52" height="27"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.73744158640000002" blue="0.52974503979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aaa, bbb, ccc;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35A-rc-u4a">
-                                <rect key="frame" x="117" y="280" width="182" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aaa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35A-rc-u4a">
+                                <rect key="frame" x="115" y="324" width="39" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ey1-UX-e69">
+                                <rect key="frame" x="153" y="324" width="13" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mC7-oC-yff">
+                                <rect key="frame" x="308" y="414" width="13" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7N-0e-WMI">
+                                <rect key="frame" x="207" y="324" width="13" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=";" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRp-TV-cDb">
+                                <rect key="frame" x="260" y="324" width="13" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bbb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCo-kI-NTI">
+                                <rect key="frame" x="170" y="324" width="39" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ccc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbm-jW-nup">
+                                <rect key="frame" x="222" y="324" width="39" height="27"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -254,15 +332,207 @@
                                     <action selector="btNext:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hjR-p3-FEh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oh9-7u-N2y">
+                                <rect key="frame" x="903" y="704" width="93" height="30"/>
+                                <state key="normal" title="Configuration"/>
+                                <connections>
+                                    <action selector="modifyNames:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0wI-1U-Yz3"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VPD-OZ-jit">
+                                <rect key="frame" x="109" y="323" width="54" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U0z-Et-JmU">
+                                <rect key="frame" x="166" y="323" width="54" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxX-aI-TTP">
+                                <rect key="frame" x="223" y="323" width="54" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8oe-SC-cme">
+                                <rect key="frame" x="147" y="415" width="107" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="= 0;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMp-MK-eVh">
+                                <rect key="frame" x="120" y="354" width="52" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bbb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7al-3t-sCj">
+                                <rect key="frame" x="69" y="384" width="39" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bbb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovt-5r-44V">
+                                <rect key="frame" x="325" y="415" width="39" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="= 0;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5t-Se-6Pf">
+                                <rect key="frame" x="120" y="384" width="52" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRQ-4P-LEJ">
+                                <rect key="frame" x="288" y="25" width="13" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aaa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g50-Dz-34K">
+                                <rect key="frame" x="67" y="104" width="39" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="=" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Im-eq-BjN">
+                                <rect key="frame" x="120" y="105" width="13" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aaa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N49-TI-chu">
+                                <rect key="frame" x="147" y="104" width="39" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aaa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvH-ZQ-nqs">
+                                <rect key="frame" x="183" y="167" width="39" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+ 10;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fA-Sq-G1f">
+                                <rect key="frame" x="199" y="105" width="65" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bbb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGf-RV-mce">
+                                <rect key="frame" x="67" y="135" width="39" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="=" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTP-sQ-gdZ">
+                                <rect key="frame" x="120" y="136" width="13" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="=" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xub-En-lhb">
+                                <rect key="frame" x="157" y="168" width="15" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bbb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z7-zv-a59">
+                                <rect key="frame" x="147" y="135" width="39" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bbb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLz-fI-gXT">
+                                <rect key="frame" x="260" y="168" width="39" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+ 20;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B81-6h-dhX">
+                                <rect key="frame" x="199" y="136" width="65" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrD-kC-h3G">
+                                <rect key="frame" x="235" y="168" width="13" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=";" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20P-Jq-VEm">
+                                <rect key="frame" x="239" y="197" width="13" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=";" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xH3-2H-kaF">
+                                <rect key="frame" x="298" y="168" width="13" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="result" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdw-m1-jCe">
+                                <rect key="frame" x="120" y="75" width="78" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=";" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzK-e2-dp6">
+                                <rect key="frame" x="198" y="75" width="13" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yZK-hj-GSM">
+                                <rect key="frame" x="245" y="55" width="51" height="31"/>
+                                <color key="onTintColor" red="0.45771751589999998" green="0.65448503229999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aan-ig-Q0i">
+                                <rect key="frame" x="359" y="55" width="51" height="31"/>
+                                <color key="onTintColor" red="0.45771751589999998" green="0.65448503229999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=";" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddx-XV-7HS">
+                                <rect key="frame" x="375" y="416" width="13" height="27"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.19939630681818177" green="0.19939630681818177" blue="0.19939630681818177" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="btConfiguration" destination="Oh9-7u-N2y" id="XyH-kQ-gbV"/>
                         <outlet property="iArrow" destination="6wD-d1-WjH" id="JgQ-3d-dMe"/>
                         <outlet property="iMemory" destination="iox-L4-z46" id="p3w-Ik-3wz"/>
+                        <outlet property="lbFunc" destination="jFW-3i-MXX" id="MH5-a2-313"/>
+                        <outlet property="lbFunc1" destination="OLn-W8-usJ" id="ZyF-iQ-mhq"/>
                         <outlet property="lbFunction" destination="jFW-3i-MXX" id="QUZ-Us-VdK"/>
+                        <outlet property="lbVar1" destination="35A-rc-u4a" id="Bym-cI-Mkl"/>
+                        <outlet property="lbVar11" destination="6Cy-qr-3Dg" id="0Z8-ji-3dA"/>
+                        <outlet property="lbVar12" destination="ZDI-pX-q7t" id="L7p-9m-8Ah"/>
+                        <outlet property="lbVar13" destination="5Jd-i4-2HE" id="mZ7-rt-5eX"/>
+                        <outlet property="lbVar14" destination="g50-Dz-34K" id="g11-Ng-4t0"/>
+                        <outlet property="lbVar15" destination="N49-TI-chu" id="WHh-tX-f9N"/>
+                        <outlet property="lbVar16" destination="gvH-ZQ-nqs" id="G1Y-1F-yen"/>
+                        <outlet property="lbVar2" destination="uCo-kI-NTI" id="wiN-Xg-DRe"/>
+                        <outlet property="lbVar21" destination="7al-3t-sCj" id="MK2-dL-O7V"/>
+                        <outlet property="lbVar22" destination="ovt-5r-44V" id="fsA-YE-YuV"/>
+                        <outlet property="lbVar23" destination="AH0-tO-bj8" id="DDj-wu-cd8"/>
+                        <outlet property="lbVar24" destination="qGf-RV-mce" id="Wtz-N7-lFZ"/>
+                        <outlet property="lbVar25" destination="6z7-zv-a59" id="csj-KO-nYN"/>
+                        <outlet property="lbVar26" destination="gLz-fI-gXT" id="Icf-Au-cTt"/>
+                        <outlet property="lbVar3" destination="Pbm-jW-nup" id="8tG-9r-zNR"/>
+                        <outlet property="lbVar31" destination="eWm-gX-3Kn" id="22o-kB-pwH"/>
+                        <outlet property="swVar1" destination="yZK-hj-GSM" id="bzg-w0-WLw"/>
+                        <outlet property="swVar2" destination="aan-ig-Q0i" id="oWC-lU-LKl"/>
+                        <outlet property="tfModifyFunc" destination="8oe-SC-cme" id="l9E-Z2-IfG"/>
+                        <outlet property="tfModifyVar1" destination="VPD-OZ-jit" id="15q-zh-wdn"/>
+                        <outlet property="tfModifyVar2" destination="U0z-Et-JmU" id="mFM-qa-udE"/>
+                        <outlet property="tfModifyVar3" destination="bxX-aI-TTP" id="7he-Yn-Ac5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

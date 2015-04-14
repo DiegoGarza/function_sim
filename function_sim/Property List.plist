@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>nomVar1</key>
+	<string>iV1</string>
+	<key>nomVar2</key>
+	<string>iV2</string>
+	<key>nomVar3</key>
+	<string>iV3</string>
+	<key>nomFunc</key>
+	<string>function</string>
+	<key>refVar1</key>
+	<false/>
+	<key>refVar2</key>
+	<false/>
+</dict>
+</plist>

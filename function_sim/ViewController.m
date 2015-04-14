@@ -9,7 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property BOOL configurationFlag;
+@property (strong, nonatomic) NSDictionary *config;
 @end
 
 @implementation ViewController
@@ -17,6 +18,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _tfModifyVar1.hidden = YES;
+    _tfModifyVar2.hidden = YES;
+    _tfModifyVar3.hidden = YES;
+    _tfModifyFunc.hidden = YES;
+    _swVar1.hidden = YES;
+    _swVar2.hidden = YES;
+    _configurationFlag = false;
+    
+    //Load config from plist
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    NSString *docfilePath = [basePath stringByAppendingPathComponent:@"Property List.plist"];
+    self.config = [[NSDictionary alloc] initWithContentsOfFile: docfilePath];
+    _tfModifyVar1.text = [_config objectForKey:@"nomVar1"];
+    _tfModifyVar2.text = [_config objectForKey:@"nomVar2"];
+    _tfModifyVar3.text = [_config objectForKey:@"nomVar3"];
+    _tfModifyFunc.text = [_config objectForKey:@"nomFunc"];
+    _swVar1.on = [[_config objectForKey:@"refVar1"] boolValue];
+    _swVar2.on = [[_config objectForKey:@"refVar1"] boolValue];
+    
+    //Set names
+    [self setLabelsAndReferences];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,5 +54,81 @@
 }
 
 - (IBAction)btBack:(id)sender {
+}
+
+//Shows the configuration buttons and modifies
+- (IBAction)modifyNames:(id)sender {
+    //Show configuration controls
+    if(!_configurationFlag) {
+        _tfModifyVar1.hidden = NO;
+        _tfModifyVar2.hidden = NO;
+        _tfModifyVar3.hidden = NO;
+        _tfModifyFunc.hidden = NO;
+        _swVar1.hidden = NO;
+        _swVar2.hidden = NO;
+        [_btConfiguration setTitle:@"Done" forState:UIControlStateNormal];
+    }
+    //Hide controls and modify
+    else {
+        //Modify names
+        [self setLabelsAndReferences];
+        
+        //Modify plist
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Property List" ofType:@"plist"];
+        NSMutableDictionary *plist = [NSMutableDictionary dictionaryWithContentsOfFile:filePath];
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+        NSString *docfilePath = [basePath stringByAppendingPathComponent:@"Property List.plist"];
+        [plist setObject:_tfModifyVar1.text forKey:@"nomVar1"];
+        [plist setObject:_tfModifyVar2.text forKey:@"nomVar2"];
+        [plist setObject:_tfModifyVar3.text forKey:@"nomVar3"];
+        [plist setObject:_tfModifyFunc.text forKey:@"nomFunc"];
+        [plist setObject:[NSNumber numberWithBool:_swVar1.isOn] forKey:@"refVar1"];
+        [plist setObject:[NSNumber numberWithBool:_swVar2.isOn] forKey:@"refVar2"];
+        [plist writeToFile:docfilePath atomically:YES];
+        
+        //Hide config
+        _tfModifyVar1.hidden = YES;
+        _tfModifyVar2.hidden = YES;
+        _tfModifyVar3.hidden = YES;
+        _tfModifyFunc.hidden = YES;
+        _swVar1.hidden = YES;
+        _swVar2.hidden = YES;
+        [_btConfiguration setTitle:@"Configuration" forState:UIControlStateNormal];
+    }
+    _configurationFlag = !_configurationFlag;
+}
+
+- (void) setLabelsAndReferences {
+    if(_swVar1.isOn) {
+        NSString *var = _tfModifyVar1.text;
+        _lbVar13.text = [NSString stringWithFormat:@"&%@", var];
+    }
+    else {
+        _lbVar13.text = _tfModifyVar1.text;
+    }
+    if(_swVar2.isOn) {
+        NSString *var = _tfModifyVar1.text;
+        _lbVar23.text = [NSString stringWithFormat:@"&%@", var];
+    }
+    else {
+        _lbVar23.text = _tfModifyVar2.text;
+    }
+    _lbVar1.text = _tfModifyVar1.text;
+    _lbVar11.text = _tfModifyVar1.text;
+    _lbVar12.text = _tfModifyVar1.text;
+    _lbVar14.text = _tfModifyVar1.text;
+    _lbVar15.text = _tfModifyVar1.text;
+    _lbVar16.text = _tfModifyVar1.text;
+    _lbVar2.text = _tfModifyVar2.text;
+    _lbVar21.text = _tfModifyVar2.text;
+    _lbVar22.text = _tfModifyVar2.text;
+    _lbVar24.text = _tfModifyVar2.text;
+    _lbVar25.text = _tfModifyVar2.text;
+    _lbVar26.text = _tfModifyVar2.text;
+    _lbVar3.text = _tfModifyVar3.text;
+    _lbVar31.text = _tfModifyVar3.text;
+    _lbFunc.text = _tfModifyFunc.text;
+    _lbFunc1.text = _tfModifyFunc.text;
 }
 @end

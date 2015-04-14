@@ -12,6 +12,7 @@
 		37F0A2BB1AD2F669001FC72D /* memory.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F0A2B61AD2F669001FC72D /* memory.png */; };
 		37F0A2BC1AD2F669001FC72D /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F0A2B71AD2F669001FC72D /* play.png */; };
 		37F0A2BD1AD2F669001FC72D /* prev.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F0A2B81AD2F669001FC72D /* prev.png */; };
+		7E19876C1ADC738C0045D883 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E19876B1ADC738C0045D883 /* Property List.plist */; };
 		7E74F08B1AC09A7200639AB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74F08A1AC09A7200639AB3 /* main.m */; };
 		7E74F08E1AC09A7200639AB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74F08D1AC09A7200639AB3 /* AppDelegate.m */; };
 		7E74F0911AC09A7200639AB3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74F0901AC09A7200639AB3 /* ViewController.m */; };
@@ -38,6 +39,7 @@
 		37F0A2B61AD2F669001FC72D /* memory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memory.png; sourceTree = "<group>"; };
 		37F0A2B71AD2F669001FC72D /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		37F0A2B81AD2F669001FC72D /* prev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prev.png; sourceTree = "<group>"; };
+		7E19876B1ADC738C0045D883 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		7E74F0851AC09A7200639AB3 /* function_sim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = function_sim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E74F0891AC09A7200639AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E74F08A1AC09A7200639AB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				7E74F08D1AC09A7200639AB3 /* AppDelegate.m */,
 				7E74F08F1AC09A7200639AB3 /* ViewController.h */,
 				7E74F0901AC09A7200639AB3 /* ViewController.m */,
+				7E19876B1ADC738C0045D883 /* Property List.plist */,
 				7E74F0921AC09A7200639AB3 /* Main.storyboard */,
 				7E74F0951AC09A7200639AB3 /* Images.xcassets */,
 				7E74F0971AC09A7200639AB3 /* LaunchScreen.xib */,
@@ -233,6 +236,7 @@
 				37F0A2BD1AD2F669001FC72D /* prev.png in Resources */,
 				7E74F0961AC09A7200639AB3 /* Images.xcassets in Resources */,
 				37F0A2BC1AD2F669001FC72D /* play.png in Resources */,
+				7E19876C1ADC738C0045D883 /* Property List.plist in Resources */,
 				37F0A2BA1AD2F669001FC72D /* forw.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
