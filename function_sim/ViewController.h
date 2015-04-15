@@ -12,6 +12,13 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *iMemory;
 @property (weak, nonatomic) IBOutlet UIImageView *iArrow;
+
+//Addresses in memory
+@property (weak, nonatomic) IBOutlet UILabel *lbAdd1;
+@property (weak, nonatomic) IBOutlet UILabel *lbAdd2;
+@property (weak, nonatomic) IBOutlet UILabel *lbAdd3;
+
+
 - (IBAction)btNext:(id)sender;
 - (IBAction)btPlay:(id)sender;
 - (IBAction)btBack:(id)sender;

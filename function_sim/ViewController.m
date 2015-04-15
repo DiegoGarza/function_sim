@@ -46,6 +46,9 @@
     _configurationFlag = false;
     _play = false;
     _step = -1;
+    _lbAdd1.hidden = YES;
+    _lbAdd2.hidden = YES;
+    _lbAdd3.hidden = YES;
     
     _labels = [NSMutableArray arrayWithObjects:_lbAnim1,_lbAnim2,_lbAnim3,_lbAnim4,_lbAnim5,_lbAnim6,_lbAnim7,_lbAnim8,_lbAnim9,_lbAnim10,_lbAnim11, nil];
     _labelsSize = _labels.count;
@@ -168,7 +171,7 @@
         _lbVar13.text = _tfModifyVar1.text;
     }
     if(_swVar2.isOn) {
-        NSString *var = _tfModifyVar1.text;
+        NSString *var = _tfModifyVar2.text;
         _lbVar23.text = [NSString stringWithFormat:@"&%@", var];
     }
     else {

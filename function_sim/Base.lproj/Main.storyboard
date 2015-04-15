@@ -205,7 +205,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="function" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFW-3i-MXX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="function" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFW-3i-MXX">
                                 <rect key="frame" x="74" y="23" width="105" height="31"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.73744158643741686" blue="0.52974503983114762" alpha="1" colorSpace="calibratedRGB"/>
@@ -588,6 +588,21 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="1" green="0.88960408209999997" blue="0.64254102040000005" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yu0-Ju-eeb">
+                                <rect key="frame" x="848" y="68" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXA-ka-BXM">
+                                <rect key="frame" x="848" y="159" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIo-T3-4ar">
+                                <rect key="frame" x="848" y="246" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.19939630681818177" green="0.19939630681818177" blue="0.19939630681818177" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -597,6 +612,9 @@
                         <outlet property="btConfiguration" destination="Oh9-7u-N2y" id="XyH-kQ-gbV"/>
                         <outlet property="iArrow" destination="6wD-d1-WjH" id="JgQ-3d-dMe"/>
                         <outlet property="iMemory" destination="iox-L4-z46" id="p3w-Ik-3wz"/>
+                        <outlet property="lbAdd1" destination="Yu0-Ju-eeb" id="MyO-J0-vK3"/>
+                        <outlet property="lbAdd2" destination="hXA-ka-BXM" id="ssc-5P-pjI"/>
+                        <outlet property="lbAdd3" destination="TIo-T3-4ar" id="ic3-GH-Te4"/>
                         <outlet property="lbAnim1" destination="u5c-rH-Wpq" id="Yo4-ko-vge"/>
                         <outlet property="lbAnim10" destination="Ssg-j7-blV" id="ilc-fT-DQ5"/>
                         <outlet property="lbAnim11" destination="wml-TY-MVb" id="4y4-FQ-NGN"/>
