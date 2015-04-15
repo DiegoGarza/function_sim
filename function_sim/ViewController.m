@@ -11,6 +11,11 @@
 @interface ViewController ()
 @property BOOL configurationFlag;
 @property (strong, nonatomic) NSDictionary *config;
+@property (strong, nonatomic) NSMutableArray *labels;
+@property (nonatomic) BOOL play;
+@property (nonatomic) NSInteger step;
+@property (nonatomic) NSInteger labelsSize;
+@property (nonatomic) NSTimer *animationTimer;
 @end
 
 @implementation ViewController
@@ -18,13 +23,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //Setup and hiding
+    _animationTimer = nil;
     _tfModifyVar1.hidden = YES;
     _tfModifyVar2.hidden = YES;
     _tfModifyVar3.hidden = YES;
     _tfModifyFunc.hidden = YES;
+    _lbAnim1.hidden = YES;
+    _lbAnim2.hidden = YES;
+    _lbAnim3.hidden = YES;
+    _lbAnim4.hidden = YES;
+    _lbAnim5.hidden = YES;
+    _lbAnim6.hidden = YES;
+    _lbAnim7.hidden = YES;
+    _lbAnim8.hidden = YES;
+    _lbAnim9.hidden = YES;
+    _lbAnim10.hidden = YES;
+    _lbAnim11.hidden = YES;
     _swVar1.hidden = YES;
     _swVar2.hidden = YES;
     _configurationFlag = false;
+    _play = false;
+    _step = -1;
+    
+    _labels = [NSMutableArray arrayWithObjects:_lbAnim1,_lbAnim2,_lbAnim3,_lbAnim4,_lbAnim5,_lbAnim6,_lbAnim7,_lbAnim8,_lbAnim9,_lbAnim10,_lbAnim11, nil];
+    _labelsSize = _labels.count;
     
     //Load config from plist
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -48,12 +72,48 @@
 }
 
 - (IBAction)btNext:(id)sender {
+    [self animation:@"next"];
 }
 
 - (IBAction)btPlay:(id)sender {
+    if(!_play){
+        _play = true;
+        [self animation:@"go"];
+    }
+    else {
+        _play = false;
+        [self animation:@"stop"];
+    }
 }
 
 - (IBAction)btBack:(id)sender {
+    [self animation:@"back"];
+}
+
+- (void) animation:(NSString*) action {
+    if ([action isEqualToString:@"go"]) {
+         _animationTimer = [NSTimer scheduledTimerWithTimeInterval:2.0
+                                             target:self
+                                           selector:@selector(doSomethingWhenTimeIsUp:)
+                                           userInfo:nil
+                                            repeats:YES];
+    }
+    else if ([action isEqualToString:@"stop"]) {
+        [_animationTimer invalidate];
+        _animationTimer = nil;
+    }
+}
+
+- (void) doSomethingWhenTimeIsUp:(NSTimer*)t {
+    printf("check");
+    _step = (_step+1) %_labelsSize;
+    [[self.labels objectAtIndex:_step] setHidden:NO];
+    _step--;
+    if (_step < 0) {
+        _step = _labelsSize + _step;
+    }
+    [[self.labels objectAtIndex:_step] setHidden:YES];
+    _step = (_step+1) %_labelsSize;
 }
 
 //Shows the configuration buttons and modifies

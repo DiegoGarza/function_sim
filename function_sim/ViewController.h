@@ -15,10 +15,14 @@
 - (IBAction)btNext:(id)sender;
 - (IBAction)btPlay:(id)sender;
 - (IBAction)btBack:(id)sender;
+
+//Variable and function labels
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyVar1;
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyVar2;
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyVar3;
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyFunc;
+
+//Variable and function labels
 @property (strong, nonatomic) IBOutlet UILabel *lbVar1;
 @property (strong, nonatomic) IBOutlet UILabel *lbVar11;
 @property (strong, nonatomic) IBOutlet UILabel *lbVar12;
@@ -39,6 +43,20 @@
 @property (strong, nonatomic) IBOutlet UILabel *lbFunc1;
 @property (strong, nonatomic) IBOutlet UISwitch *swVar1;
 @property (strong, nonatomic) IBOutlet UISwitch *swVar2;
+
+//Animation labels
+@property (strong, nonatomic) IBOutlet UILabel *lbAnim1;
+@property (strong, nonatomic) IBOutlet UILabel *lbAnim2;
+@property (strong, nonatomic) IBOutlet UILabel *lbAnim3;
+@property (strong, nonatomic) IBOutlet UILabel *lbAnim4;
+@property (strong, nonatomic) IBOutlet UILabel *lbAnim5;
+@property (strong, nonatomic) IBOutlet UILabel *lbAnim6;
+@property (strong, nonatomic) IBOutlet UILabel *lbAnim7;
+@property (strong, nonatomic) IBOutlet UILabel *lbAnim8;
+@property (strong, nonatomic) IBOutlet UILabel *lbAnim9;
+@property (strong, nonatomic) IBOutlet UILabel *lbAnim10;
+@property (strong, nonatomic) IBOutlet UILabel *lbAnim11;
+
 
 @property (strong, nonatomic) IBOutlet UIButton *btConfiguration;
 - (IBAction)modifyNames:(id)sender;
