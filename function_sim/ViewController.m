@@ -110,20 +110,6 @@
         [_animationTimer invalidate];
         _animationTimer = nil;
     }
-    if([action isEqualToString:@"next"]) {
-        _animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.2
-                                                           target:self
-                                                         selector:@selector(doSomethingWhenTimeIsUp:)
-                                                         userInfo:nil
-                                                          repeats:NO];
-    }
-    else if([action isEqualToString:@"back"]) {
-        _animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.2
-                                                           target:self
-                                                         selector:@selector(doSomethingWhenTimeIsUp:)
-                                                         userInfo:nil
-                                                          repeats:NO];
-    }
 }
 
 - (void) doSomethingWhenTimeIsUp:(NSTimer*)t {
