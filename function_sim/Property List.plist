@@ -8,6 +8,10 @@
 	<string>iV2</string>
 	<key>nomVar3</key>
 	<string>iV3</string>
+	<key>nomFuncVar1</key>
+	<string>iF1</string>
+	<key>nomFuncVar2</key>
+	<string>iF2</string>
 	<key>nomFunc</key>
 	<string>function</string>
 	<key>refVar1</key>
