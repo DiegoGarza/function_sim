@@ -105,10 +105,32 @@
         [_animationTimer invalidate];
         _animationTimer = nil;
     }
+    else if ([action isEqualToString:@"next"]) {
+        _step = (_step+1) %_labelsSize;
+        [[self.labels objectAtIndex:_step] setHidden:NO];
+        _step--;
+        if (_step < 0) {
+            _step = _labelsSize + _step;
+        }
+        [[self.labels objectAtIndex:_step] setHidden:YES];
+        _step = (_step+1) %_labelsSize;
+    }
+    else if ([action isEqualToString:@"back"]) {
+        _step--;
+        if (_step < 0) {
+            _step = _labelsSize + _step;
+        }
+        [[self.labels objectAtIndex:_step] setHidden:NO];
+        _step = (_step+1) %_labelsSize;
+        [[self.labels objectAtIndex:_step] setHidden:YES];
+        _step--;
+        if (_step < 0) {
+            _step = _labelsSize + _step;
+        }
+    }
 }
 
 - (void) doSomethingWhenTimeIsUp:(NSTimer*)t {
-    printf("check");
     _step = (_step+1) %_labelsSize;
     [[self.labels objectAtIndex:_step] setHidden:NO];
     _step--;
