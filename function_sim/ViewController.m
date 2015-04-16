@@ -49,6 +49,11 @@
     _lbAdd1.hidden = YES;
     _lbAdd2.hidden = YES;
     _lbAdd3.hidden = YES;
+    _lbAdd4.hidden = YES;
+    _lbAddVal1.hidden = YES;
+    _lbAddVal2.hidden = YES;
+    _lbAddVal3.hidden = YES;
+    _lbAddVal4.hidden = YES;
     
     _labels = [NSMutableArray arrayWithObjects:_lbAnim1,_lbAnim2,_lbAnim3,_lbAnim4,_lbAnim5,_lbAnim6,_lbAnim7,_lbAnim8,_lbAnim9,_lbAnim10,_lbAnim11, nil];
     _labelsSize = _labels.count;
@@ -95,7 +100,7 @@
 
 - (void) animation:(NSString*) action {
     if ([action isEqualToString:@"go"]) {
-         _animationTimer = [NSTimer scheduledTimerWithTimeInterval:2.0
+         _animationTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                              target:self
                                            selector:@selector(doSomethingWhenTimeIsUp:)
                                            userInfo:nil
@@ -104,6 +109,20 @@
     else if ([action isEqualToString:@"stop"]) {
         [_animationTimer invalidate];
         _animationTimer = nil;
+    }
+    if([action isEqualToString:@"next"]) {
+        _animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.2
+                                                           target:self
+                                                         selector:@selector(doSomethingWhenTimeIsUp:)
+                                                         userInfo:nil
+                                                          repeats:NO];
+    }
+    else if([action isEqualToString:@"back"]) {
+        _animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.2
+                                                           target:self
+                                                         selector:@selector(doSomethingWhenTimeIsUp:)
+                                                         userInfo:nil
+                                                          repeats:NO];
     }
 }
 

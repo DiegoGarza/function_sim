@@ -17,6 +17,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbAdd1;
 @property (weak, nonatomic) IBOutlet UILabel *lbAdd2;
 @property (weak, nonatomic) IBOutlet UILabel *lbAdd3;
+@property (weak, nonatomic) IBOutlet UILabel *lbAdd4;
+@property (weak, nonatomic) IBOutlet UILabel *lbAddVal1;
+@property (weak, nonatomic) IBOutlet UILabel *lbAddVal2;
+@property (weak, nonatomic) IBOutlet UILabel *lbAddVal3;
+@property (weak, nonatomic) IBOutlet UILabel *lbAddVal4;
 
 
 - (IBAction)btNext:(id)sender;

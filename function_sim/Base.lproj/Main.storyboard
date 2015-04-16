@@ -374,7 +374,7 @@
                                     <action selector="btPlay:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cuz-ds-psd"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="memory.png" translatesAutoresizingMaskIntoConstraints="NO" id="iox-L4-z46">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="memory.png" highlightedImage="memory.png" translatesAutoresizingMaskIntoConstraints="NO" id="iox-L4-z46">
                                 <rect key="frame" x="778" y="33" width="218" height="619"/>
                             </imageView>
                             <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4e-wK-Zll">
@@ -589,17 +589,42 @@
                                 <color key="shadowColor" red="1" green="0.88960408209999997" blue="0.64254102040000005" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yu0-Ju-eeb">
-                                <rect key="frame" x="848" y="68" width="78" height="21"/>
+                                <rect key="frame" x="802" y="68" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXA-ka-BXM">
-                                <rect key="frame" x="848" y="159" width="78" height="21"/>
+                                <rect key="frame" x="802" y="159" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIo-T3-4ar">
-                                <rect key="frame" x="848" y="246" width="78" height="21"/>
+                                <rect key="frame" x="802" y="244" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yQ-cE-UZ9">
+                                <rect key="frame" x="802" y="332" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AddVal1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQj-Yt-iEE">
+                                <rect key="frame" x="917" y="68" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AddVal2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmW-RB-dH8">
+                                <rect key="frame" x="917" y="159" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AddVal3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRo-cx-LMl">
+                                <rect key="frame" x="917" y="244" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AddVal4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkz-69-Qpy">
+                                <rect key="frame" x="917" y="332" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -615,6 +640,11 @@
                         <outlet property="lbAdd1" destination="Yu0-Ju-eeb" id="MyO-J0-vK3"/>
                         <outlet property="lbAdd2" destination="hXA-ka-BXM" id="ssc-5P-pjI"/>
                         <outlet property="lbAdd3" destination="TIo-T3-4ar" id="ic3-GH-Te4"/>
+                        <outlet property="lbAdd4" destination="5yQ-cE-UZ9" id="hUr-2p-Dhh"/>
+                        <outlet property="lbAddVal1" destination="bQj-Yt-iEE" id="PNk-jh-lN1"/>
+                        <outlet property="lbAddVal2" destination="ZmW-RB-dH8" id="W91-zq-vX0"/>
+                        <outlet property="lbAddVal3" destination="YRo-cx-LMl" id="sTg-6I-45S"/>
+                        <outlet property="lbAddVal4" destination="jkz-69-Qpy" id="I31-6h-Ftt"/>
                         <outlet property="lbAnim1" destination="u5c-rH-Wpq" id="Yo4-ko-vge"/>
                         <outlet property="lbAnim10" destination="Ssg-j7-blV" id="ilc-fT-DQ5"/>
                         <outlet property="lbAnim11" destination="wml-TY-MVb" id="4y4-FQ-NGN"/>
@@ -661,7 +691,7 @@
     <resources>
         <image name="arrow_right.png" width="26" height="26"/>
         <image name="forward_to_end_01.png" width="26" height="26"/>
-        <image name="memory.png" width="909" height="2108"/>
+        <image name="memory.png" width="910" height="2107"/>
         <image name="play.png" width="26" height="26"/>
         <image name="rewind_to_start_01.png" width="26" height="26"/>
     </resources>
