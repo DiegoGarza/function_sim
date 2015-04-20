@@ -29,6 +29,8 @@
     _tfModifyVar1.hidden = YES;
     _tfModifyVar2.hidden = YES;
     _tfModifyVar3.hidden = YES;
+    _tfModifyFuncVar1.hidden = YES;
+    _tfModifyFuncVar2.hidden = YES;
     _tfModifyFunc.hidden = YES;
     _lbAnim1.hidden = YES;
     _lbAnim2.hidden = YES;
@@ -59,6 +61,8 @@
     _tfModifyVar1.text = [_config objectForKey:@"nomVar1"];
     _tfModifyVar2.text = [_config objectForKey:@"nomVar2"];
     _tfModifyVar3.text = [_config objectForKey:@"nomVar3"];
+    _tfModifyFuncVar1.text = [_config objectForKey:@"nomFuncVar1"];
+    _tfModifyFuncVar2.text = [_config objectForKey:@"nomFuncVar2"];
     _tfModifyFunc.text = [_config objectForKey:@"nomFunc"];
     _swVar1.on = [[_config objectForKey:@"refVar1"] boolValue];
     _swVar2.on = [[_config objectForKey:@"refVar1"] boolValue];
@@ -172,6 +176,8 @@
         _tfModifyVar1.hidden = NO;
         _tfModifyVar2.hidden = NO;
         _tfModifyVar3.hidden = NO;
+        _tfModifyFuncVar1.hidden = NO;
+        _tfModifyFuncVar2.hidden = NO;
         _tfModifyFunc.hidden = NO;
         _swVar1.hidden = NO;
         _swVar2.hidden = NO;
@@ -191,6 +197,8 @@
         [plist setObject:_tfModifyVar1.text forKey:@"nomVar1"];
         [plist setObject:_tfModifyVar2.text forKey:@"nomVar2"];
         [plist setObject:_tfModifyVar3.text forKey:@"nomVar3"];
+        [plist setObject:_tfModifyFuncVar1.text forKey:@"nomFuncVar1"];
+        [plist setObject:_tfModifyFuncVar2.text forKey:@"nomFuncVar2"];
         [plist setObject:_tfModifyFunc.text forKey:@"nomFunc"];
         [plist setObject:[NSNumber numberWithBool:_swVar1.isOn] forKey:@"refVar1"];
         [plist setObject:[NSNumber numberWithBool:_swVar2.isOn] forKey:@"refVar2"];
@@ -200,6 +208,8 @@
         _tfModifyVar1.hidden = YES;
         _tfModifyVar2.hidden = YES;
         _tfModifyVar3.hidden = YES;
+        _tfModifyFuncVar1.hidden = YES;
+        _tfModifyFuncVar2.hidden = YES;
         _tfModifyFunc.hidden = YES;
         _swVar1.hidden = YES;
         _swVar2.hidden = YES;
@@ -210,33 +220,45 @@
 
 - (void) setLabelsAndReferences {
     if(_swVar1.isOn) {
-        NSString *var = _tfModifyVar1.text;
+        NSString *var = _tfModifyFuncVar1.text;
         _lbVar13.text = [NSString stringWithFormat:@"&%@", var];
     }
     else {
-        _lbVar13.text = _tfModifyVar1.text;
+        _lbVar13.text = _tfModifyFuncVar1.text;
     }
     if(_swVar2.isOn) {
-        NSString *var = _tfModifyVar2.text;
+        NSString *var = _tfModifyFuncVar2.text;
         _lbVar23.text = [NSString stringWithFormat:@"&%@", var];
     }
     else {
-        _lbVar23.text = _tfModifyVar2.text;
+        _lbVar23.text = _tfModifyFuncVar2.text;
     }
+    
+    //Main var1
     _lbVar1.text = _tfModifyVar1.text;
     _lbVar11.text = _tfModifyVar1.text;
     _lbVar12.text = _tfModifyVar1.text;
-    _lbVar14.text = _tfModifyVar1.text;
-    _lbVar15.text = _tfModifyVar1.text;
-    _lbVar16.text = _tfModifyVar1.text;
+    
+    //Function var1
+    _lbVar14.text = _tfModifyFuncVar1.text;
+    _lbVar15.text = _tfModifyFuncVar1.text;
+    _lbVar16.text = _tfModifyFuncVar1.text;
+    
+    //Main var2
     _lbVar2.text = _tfModifyVar2.text;
     _lbVar21.text = _tfModifyVar2.text;
     _lbVar22.text = _tfModifyVar2.text;
-    _lbVar24.text = _tfModifyVar2.text;
-    _lbVar25.text = _tfModifyVar2.text;
-    _lbVar26.text = _tfModifyVar2.text;
+    
+    //Function var2
+    _lbVar24.text = _tfModifyFuncVar2.text;
+    _lbVar25.text = _tfModifyFuncVar2.text;
+    _lbVar26.text = _tfModifyFuncVar2.text;
+    
+    //Main Var3
     _lbVar3.text = _tfModifyVar3.text;
     _lbVar31.text = _tfModifyVar3.text;
+    
+    //Function name
     _lbFunc.text = _tfModifyFunc.text;
     _lbFunc1.text = _tfModifyFunc.text;
     

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Inconsolata.otf">
@@ -386,6 +386,9 @@
                                     <action selector="btBack:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ubi-WS-ewC"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow_right.png" translatesAutoresizingMaskIntoConstraints="NO" id="6wD-d1-WjH">
+                                <rect key="frame" x="643" y="42" width="140" height="74"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVl-Gg-zkg">
                                 <rect key="frame" x="560" y="707" width="35" height="28"/>
                                 <state key="normal" image="forward_to_end_01.png">
@@ -625,9 +628,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow_right.png" translatesAutoresizingMaskIntoConstraints="NO" id="6wD-d1-WjH">
-                                <rect key="frame" x="643" y="42" width="140" height="74"/>
-                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R4O-Jd-RRQ">
+                                <rect key="frame" x="235" y="24" width="73" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pg5-oS-lCF">
+                                <rect key="frame" x="348" y="24" width="61" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.19939630681818177" green="0.19939630681818177" blue="0.19939630681818177" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -678,6 +688,8 @@
                         <outlet property="swVar1" destination="yZK-hj-GSM" id="bzg-w0-WLw"/>
                         <outlet property="swVar2" destination="aan-ig-Q0i" id="oWC-lU-LKl"/>
                         <outlet property="tfModifyFunc" destination="8oe-SC-cme" id="l9E-Z2-IfG"/>
+                        <outlet property="tfModifyFuncVar1" destination="R4O-Jd-RRQ" id="tG0-bg-9QN"/>
+                        <outlet property="tfModifyFuncVar2" destination="pg5-oS-lCF" id="Dkn-10-XLi"/>
                         <outlet property="tfModifyVar1" destination="VPD-OZ-jit" id="15q-zh-wdn"/>
                         <outlet property="tfModifyVar2" destination="U0z-Et-JmU" id="mFM-qa-udE"/>
                         <outlet property="tfModifyVar3" destination="bxX-aI-TTP" id="7he-Yn-Ac5"/>

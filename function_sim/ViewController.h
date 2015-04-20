@@ -33,22 +33,30 @@
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyVar2;
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyVar3;
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyFunc;
+@property (strong, nonatomic) IBOutlet UITextField *tfModifyFuncVar1;
+@property (strong, nonatomic) IBOutlet UITextField *tfModifyFuncVar2;
 
 //Variable and function labels
 @property (strong, nonatomic) IBOutlet UILabel *lbVar1;
 @property (strong, nonatomic) IBOutlet UILabel *lbVar11;
 @property (strong, nonatomic) IBOutlet UILabel *lbVar12;
+
+//Upper function variables
 @property (strong, nonatomic) IBOutlet UILabel *lbVar13;
 @property (strong, nonatomic) IBOutlet UILabel *lbVar14;
 @property (strong, nonatomic) IBOutlet UILabel *lbVar15;
 @property (strong, nonatomic) IBOutlet UILabel *lbVar16;
+
 @property (strong, nonatomic) IBOutlet UILabel *lbVar2;
 @property (strong, nonatomic) IBOutlet UILabel *lbVar21;
 @property (strong, nonatomic) IBOutlet UILabel *lbVar22;
+
+//Upper function variables
 @property (strong, nonatomic) IBOutlet UILabel *lbVar23;
 @property (strong, nonatomic) IBOutlet UILabel *lbVar24;
 @property (strong, nonatomic) IBOutlet UILabel *lbVar25;
 @property (strong, nonatomic) IBOutlet UILabel *lbVar26;
+
 @property (strong, nonatomic) IBOutlet UILabel *lbVar3;
 @property (strong, nonatomic) IBOutlet UILabel *lbVar31;
 @property (strong, nonatomic) IBOutlet UILabel *lbFunc;
