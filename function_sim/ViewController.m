@@ -46,6 +46,7 @@
     _configurationFlag = false;
     _play = false;
     _step = -1;
+    _iArrow.hidden = YES;
     
     _labels = [NSMutableArray arrayWithObjects:_lbAnim1,_lbAnim2,_lbAnim3,_lbAnim4,_lbAnim5,_lbAnim6,_lbAnim7,_lbAnim8,_lbAnim9,_lbAnim10,_lbAnim11, nil];
     _labelsSize = _labels.count;
@@ -73,6 +74,8 @@
 
 - (IBAction)btNext:(id)sender {
     [self animation:@"next"];
+    
+    
 }
 
 - (IBAction)btPlay:(id)sender {
@@ -106,6 +109,30 @@
         _step = (_step+1) %_labelsSize;
         [[self.labels objectAtIndex:_step] setHidden:NO];
         _step--;
+        
+        if(_step == 1){
+            _iArrow.hidden = NO;
+        }
+        
+        if(_step >= 2 ){
+            
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:0.5];
+            // move and adjust views here
+            CGPoint start = [_iArrow center];
+            start.x = 700;
+            start.y += 80;
+            
+            if(start.y > 300){
+                start.y = 80;
+            }
+            
+            //start.y += 90;
+            [_iArrow setCenter: start];
+            [UIView commitAnimations];
+        
+        }
+        
         if (_step < 0) {
             _step = _labelsSize + _step;
         }
