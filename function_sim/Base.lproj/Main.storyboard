@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Inconsolata.otf">
@@ -638,6 +638,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Var5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cN-j8-c1D">
+                                <rect key="frame" x="820" y="422" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QI-TU-PsX">
+                                <rect key="frame" x="928" y="421" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.19939630681818177" green="0.19939630681818177" blue="0.19939630681818177" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -651,10 +663,12 @@
                         <outlet property="lbAdd2" destination="hXA-ka-BXM" id="ssc-5P-pjI"/>
                         <outlet property="lbAdd3" destination="TIo-T3-4ar" id="ic3-GH-Te4"/>
                         <outlet property="lbAdd4" destination="5yQ-cE-UZ9" id="hUr-2p-Dhh"/>
+                        <outlet property="lbAdd5" destination="9QI-TU-PsX" id="N7t-vQ-ShN"/>
                         <outlet property="lbAddVal1" destination="bQj-Yt-iEE" id="PNk-jh-lN1"/>
                         <outlet property="lbAddVal2" destination="ZmW-RB-dH8" id="W91-zq-vX0"/>
                         <outlet property="lbAddVal3" destination="YRo-cx-LMl" id="sTg-6I-45S"/>
                         <outlet property="lbAddVal4" destination="jkz-69-Qpy" id="I31-6h-Ftt"/>
+                        <outlet property="lbAddVal5" destination="7cN-j8-c1D" id="163-Xl-44N"/>
                         <outlet property="lbAnim1" destination="u5c-rH-Wpq" id="Yo4-ko-vge"/>
                         <outlet property="lbAnim10" destination="Ssg-j7-blV" id="ilc-fT-DQ5"/>
                         <outlet property="lbAnim11" destination="wml-TY-MVb" id="4y4-FQ-NGN"/>

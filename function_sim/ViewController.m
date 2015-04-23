@@ -48,7 +48,18 @@
     _configurationFlag = false;
     _play = false;
     _step = -1;
+    
     _iArrow.hidden = YES;
+    _lbAdd1.hidden = YES;
+    _lbAdd2.hidden = YES;
+    _lbAdd3.hidden = YES;
+    _lbAdd4.hidden = YES;
+    _lbAdd5.hidden = YES;
+    _lbAddVal1.hidden = YES;
+    _lbAddVal2.hidden = YES;
+    _lbAddVal3.hidden = YES;
+    _lbAddVal4.hidden = YES;
+    _lbAddVal5.hidden = YES;
     
     _labels = [NSMutableArray arrayWithObjects:_lbAnim1,_lbAnim2,_lbAnim3,_lbAnim4,_lbAnim5,_lbAnim6,_lbAnim7,_lbAnim8,_lbAnim9,_lbAnim10,_lbAnim11, nil];
     _labelsSize = _labels.count;
@@ -114,11 +125,79 @@
         [[self.labels objectAtIndex:_step] setHidden:NO];
         _step--;
         
-        if(_step == 1){
-            _iArrow.hidden = NO;
+        switch (_step) {
+                [UIView beginAnimations:nil context:NULL];
+                [UIView setAnimationDuration:0.5];
+                CGPoint start = [_iArrow center];
+                start.x = 700;
+                start.y += 80;
+                
+                if(start.y > 900){
+                    start.y = 80;
+                }
+                //start.y += 90;
+                [_iArrow setCenter: start];
+                [UIView commitAnimations];
+
+            case 0:
+                _lbAddVal1.hidden = NO;
+                 _lbAddVal2.hidden = NO;
+                _lbAddVal3.hidden = NO;
+                [UIView beginAnimations:nil context:NULL];
+                [UIView setAnimationDuration:0.5];
+                start.x = 700;
+                [_iArrow setCenter: start];
+                [UIView commitAnimations];
+                break;
+            case 1:
+                _iArrow.hidden = NO;
+                _lbAdd1.hidden = NO;
+                [UIView beginAnimations:nil context:NULL];
+                [UIView setAnimationDuration:0.5];
+                start.x = 700;
+                [_iArrow setCenter: start];
+                [UIView commitAnimations];
+                break;
+            case 2:
+                _lbAdd2.hidden = NO;
+                [UIView beginAnimations:nil context:NULL];
+                [UIView setAnimationDuration:0.5];
+                start.x = 700;
+                start.y += 80;
+                [_iArrow setCenter: start];
+                [UIView commitAnimations];
+                break;
+            case 3:
+                _lbAdd3.hidden = NO;
+                [UIView beginAnimations:nil context:NULL];
+                [UIView setAnimationDuration:0.5];
+                start.x = 700;
+                start.y += 80;
+                [_iArrow setCenter: start];
+                [UIView commitAnimations];
+                break;
+            case 4:
+                _lbAddVal4.hidden = NO;
+                _lbAddVal5.hidden = NO;
+                [UIView beginAnimations:nil context:NULL];
+                [UIView setAnimationDuration:0.5];
+                start.x = 700;
+                [_iArrow setCenter: start];
+                [UIView commitAnimations];
+                break;
+            case 6:
+                start.y += 80;
+                _lbAdd4.hidden = NO;
+                break;
+            case 7:
+                start.y += 80;
+                _lbAdd5.hidden = NO;
+                break;
+            default:
+                break;
         }
         
-        if(_step >= 2 ){
+        /*if(_step >= 2 ){
             
             [UIView beginAnimations:nil context:NULL];
             [UIView setAnimationDuration:0.5];
@@ -135,7 +214,7 @@
             [_iArrow setCenter: start];
             [UIView commitAnimations];
         
-        }
+        }*/
         
         if (_step < 0) {
             _step = _labelsSize + _step;
