@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbAddVal4;
 @property (weak, nonatomic) IBOutlet UILabel *lbAdd5;
 @property (weak, nonatomic) IBOutlet UILabel *lbAddVal5;
+@property (weak, nonatomic) IBOutlet UILabel *lbAddVal6;
+@property (weak, nonatomic) IBOutlet UILabel *lbAdd6;
 
 
 - (IBAction)btNext:(id)sender;
