@@ -123,6 +123,11 @@
                 _iArrow.hidden = NO;
                 _lbAdd1.hidden = NO;
                 _lbAdd1.text = @"0";
+                _lbAdd3.text = @"30";
+                _lbAdd2.text = @"0";
+                _lbAdd4.text = @"10";
+                _lbAdd5.text = @"20";
+                _lbAdd6.text = @"30";
                 break;
             case 2:
                 _lbAdd2.hidden = NO;
@@ -132,11 +137,8 @@
                 start.y = 80;
                 [_iArrow setCenter: start];
                 [UIView commitAnimations];
-                _lbAdd2.text = @"0";
                 break;
             case 3:
-                _lbAdd3.text = @"0";
-                _lbAdd3.hidden = NO;
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
@@ -192,6 +194,12 @@
                 break;
             case 9:
                 _lbAdd3.hidden = NO;
+                _lbAdd4.hidden = YES;
+                _lbAdd5.hidden = YES;
+                _lbAdd6.hidden = YES;
+                _lbAddVal4.hidden = YES;
+                _lbAddVal5.hidden = YES;
+                _lbAddVal6.hidden = YES;
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
