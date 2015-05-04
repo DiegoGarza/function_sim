@@ -723,6 +723,17 @@
                                     <action selector="clicksReset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="D1b-pp-fOg"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6V-Wb-kBh">
+                                <rect key="frame" x="614" y="622" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set timer in seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMs-Jw-ECh">
+                                <rect key="frame" x="583" y="593" width="158" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.19939630681818177" green="0.19939630681818177" blue="0.19939630681818177" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -862,6 +873,7 @@
                         <outlet property="lbFunc" destination="jFW-3i-MXX" id="MH5-a2-313"/>
                         <outlet property="lbFunc1" destination="OLn-W8-usJ" id="ZyF-iQ-mhq"/>
                         <outlet property="lbFunction" destination="jFW-3i-MXX" id="QUZ-Us-VdK"/>
+                        <outlet property="lbTimer" destination="xMs-Jw-ECh" id="f40-6y-w3a"/>
                         <outlet property="lbVar1" destination="35A-rc-u4a" id="Bym-cI-Mkl"/>
                         <outlet property="lbVar11" destination="6Cy-qr-3Dg" id="0Z8-ji-3dA"/>
                         <outlet property="lbVar12" destination="ZDI-pX-q7t" id="L7p-9m-8Ah"/>
@@ -886,6 +898,7 @@
                         <outlet property="tfModifyVar1" destination="VPD-OZ-jit" id="15q-zh-wdn"/>
                         <outlet property="tfModifyVar2" destination="U0z-Et-JmU" id="mFM-qa-udE"/>
                         <outlet property="tfModifyVar3" destination="bxX-aI-TTP" id="7he-Yn-Ac5"/>
+                        <outlet property="tfTimer" destination="Z6V-Wb-kBh" id="VzF-MR-LSr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

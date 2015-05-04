@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbAddVal5;
 @property (weak, nonatomic) IBOutlet UILabel *lbAddVal6;
 @property (weak, nonatomic) IBOutlet UILabel *lbAdd6;
+@property (strong, nonatomic) IBOutlet UILabel *lbTimer;
 
 
 - (IBAction)btNext:(id)sender;
@@ -41,6 +42,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyFunc;
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyFuncVar1;
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyFuncVar2;
+@property (strong, nonatomic) IBOutlet UITextField *tfTimer;
 
 //Variable and function labels
 @property (strong, nonatomic) IBOutlet UILabel *lbVar1;

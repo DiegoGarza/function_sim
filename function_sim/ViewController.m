@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSMutableArray *labels;
 @property (nonatomic) BOOL play;
 @property (nonatomic) NSInteger step;
+@property (nonatomic) NSInteger timer;
 @property (nonatomic) NSInteger labelsSize;
 @property (nonatomic) NSTimer *animationTimer;
 @end
@@ -30,6 +31,8 @@
     _labels = [NSMutableArray arrayWithObjects:_lbAnim1,_lbAnim2,_lbAnim3,_lbAnim4,_lbAnim5,_lbAnim6,_lbAnim7,_lbAnim8,_lbAnim9,_lbAnim10,_lbAnim11, nil];
     _labelsSize = _labels.count;
     
+    _timer = 2;
+    
     //Load config from plist
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
@@ -43,6 +46,7 @@
     _tfModifyFunc.text = [_config objectForKey:@"nomFunc"];
     _swVar1.on = [[_config objectForKey:@"refVar1"] boolValue];
     _swVar2.on = [[_config objectForKey:@"refVar1"] boolValue];
+    _tfTimer.text = [NSString stringWithFormat:@"%ld", (long) _timer];
     
     //Set names
     [self setLabelsAndReferences];
@@ -80,7 +84,7 @@
 
 - (void) animation:(NSString*) action {
     if ([action isEqualToString:@"go"]) {
-         _animationTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+         _animationTimer = [NSTimer scheduledTimerWithTimeInterval:(double) _timer
                                              target:self
                                            selector:@selector(doSomethingWhenTimeIsUp:)
                                            userInfo:nil
@@ -118,6 +122,7 @@
             case 1:
                 _iArrow.hidden = NO;
                 _lbAdd1.hidden = NO;
+                _lbAdd1.text = @"0";
                 break;
             case 2:
                 _lbAdd2.hidden = NO;
@@ -127,9 +132,11 @@
                 start.y = 80;
                 [_iArrow setCenter: start];
                 [UIView commitAnimations];
+                _lbAdd2.text = @"0";
                 break;
             case 3:
-                //_lbAdd3.hidden = NO;
+                _lbAdd3.text = @"0";
+                _lbAdd3.hidden = NO;
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
@@ -266,7 +273,7 @@
                 [UIView commitAnimations];
                 break;
             case 3:
-                //_lbAdd3.hidden = NO;
+                _lbAdd3.hidden = YES;
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
@@ -346,6 +353,8 @@
 - (IBAction)modifyNames:(id)sender {
     //Show configuration controls
     if(!_configurationFlag) {
+        _tfTimer.hidden = NO;
+        _lbTimer.hidden = NO;
         _tfModifyVar1.hidden = NO;
         _tfModifyVar2.hidden = NO;
         _tfModifyVar3.hidden = NO;
@@ -376,8 +385,11 @@
         [plist setObject:[NSNumber numberWithBool:_swVar1.isOn] forKey:@"refVar1"];
         [plist setObject:[NSNumber numberWithBool:_swVar2.isOn] forKey:@"refVar2"];
         [plist writeToFile:docfilePath atomically:YES];
+        _timer = [_tfTimer.text integerValue];
         
         //Hide config
+        _tfTimer.hidden = YES;
+        _lbTimer.hidden = YES;
         _tfModifyVar1.hidden = YES;
         _tfModifyVar2.hidden = YES;
         _tfModifyVar3.hidden = YES;
@@ -445,6 +457,8 @@
 
 -(void) setupAndHiding {
     _animationTimer = nil;
+    _lbTimer.hidden = YES;
+    _tfTimer.hidden = YES;
     _tfModifyVar1.hidden = YES;
     _tfModifyVar2.hidden = YES;
     _tfModifyVar3.hidden = YES;
