@@ -366,14 +366,7 @@
 }
 
 - (void) doSomethingWhenTimeIsUp:(NSTimer*)t {
-    _step = (_step+1) %_labelsSize;
-    [[self.labels objectAtIndex:_step] setHidden:NO];
-    _step--;
-    if (_step < 0) {
-        _step = _labelsSize + _step;
-    }
-    [[self.labels objectAtIndex:_step] setHidden:YES];
-    _step = (_step+1) %_labelsSize;
+    [self animation:@"next"];
 }
 
 //Shows the configuration buttons and modifies
