@@ -25,43 +25,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //Setup and hiding
-    _animationTimer = nil;
-    _tfModifyVar1.hidden = YES;
-    _tfModifyVar2.hidden = YES;
-    _tfModifyVar3.hidden = YES;
-    _tfModifyFuncVar1.hidden = YES;
-    _tfModifyFuncVar2.hidden = YES;
-    _tfModifyFunc.hidden = YES;
-    _lbAnim1.hidden = YES;
-    _lbAnim2.hidden = YES;
-    _lbAnim3.hidden = YES;
-    _lbAnim4.hidden = YES;
-    _lbAnim5.hidden = YES;
-    _lbAnim6.hidden = YES;
-    _lbAnim7.hidden = YES;
-    _lbAnim8.hidden = YES;
-    _lbAnim9.hidden = YES;
-    _lbAnim10.hidden = YES;
-    _lbAnim11.hidden = YES;
-    _swVar1.hidden = YES;
-    _swVar2.hidden = YES;
-    _configurationFlag = false;
-    _play = false;
-    _step = -1;
-    
-    _iArrow.hidden = YES;
-    _lbAdd1.hidden = YES;
-    _lbAdd2.hidden = YES;
-    _lbAdd3.hidden = YES;
-    _lbAdd4.hidden = YES;
-    _lbAdd5.hidden = YES;
-    _lbAdd6.hidden = YES;
-    _lbAddVal1.hidden = YES;
-    _lbAddVal2.hidden = YES;
-    _lbAddVal3.hidden = YES;
-    _lbAddVal4.hidden = YES;
-    _lbAddVal5.hidden = YES;
-    _lbAddVal6.hidden = YES;
+    [self setupAndHiding];
     
     _labels = [NSMutableArray arrayWithObjects:_lbAnim1,_lbAnim2,_lbAnim3,_lbAnim4,_lbAnim5,_lbAnim6,_lbAnim7,_lbAnim8,_lbAnim9,_lbAnim10,_lbAnim11, nil];
     _labelsSize = _labels.count;
@@ -90,7 +54,8 @@
 }
 
 - (IBAction)btNext:(id)sender {
-    [self animation:@"next"];
+    if(_step != _labelsSize-1)
+        [self animation:@"next"];
 }
 
 - (IBAction)btPlay:(id)sender {
@@ -105,7 +70,12 @@
 }
 
 - (IBAction)btBack:(id)sender {
-    [self animation:@"back"];
+    if(_step != -1)
+        [self animation:@"back"];
+}
+
+- (IBAction)clicksReset:(id)sender {
+    [self setupAndHiding];
 }
 
 - (void) animation:(NSString*) action {
@@ -138,7 +108,8 @@
                 //start.y += 90;
                 [_iArrow setCenter: start];
                 [UIView commitAnimations];
-
+            case -1:
+                break;
             case 0:
                 _lbAddVal1.hidden = NO;
                  _lbAddVal2.hidden = NO;
@@ -199,7 +170,7 @@
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
-                start.y = 330;
+                start.y = 340;
                 [_iArrow setCenter: start];
                 [UIView commitAnimations];
                 break;
@@ -217,7 +188,7 @@
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
-                start.y = 160;
+                start.y = 170;
                 [_iArrow setCenter: start];
                 [UIView commitAnimations];
                 break;
@@ -250,7 +221,7 @@
          _step = (_step+1) %_labelsSize;
          
     }
-    else if ([action isEqualToString:@"back"]) {
+    else if ([action isEqualToString:@"back"] && _step!= 0) {
         _step--;
         if (_step < 0) {
             _step = _labelsSize + _step;
@@ -259,10 +230,7 @@
         _step = (_step+1) %_labelsSize;
         [[self.labels objectAtIndex:_step] setHidden:YES];
         _step--;
-        if (_step < 0) {
-            _step = _labelsSize + _step;
-        }
-    
+        
         switch (_step) {
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
@@ -277,17 +245,19 @@
                 [_iArrow setCenter: start];
                 [UIView commitAnimations];
                 
+            case -1:
+                break;
             case 0:
-                _lbAddVal1.hidden = NO;
-                _lbAddVal2.hidden = NO;
-                _lbAddVal3.hidden = NO;
+                _lbAddVal1.hidden = YES;
+                _lbAddVal2.hidden = YES;
+                _lbAddVal3.hidden = YES;
                 break;
             case 1:
-                _iArrow.hidden = NO;
-                _lbAdd1.hidden = NO;
+                _iArrow.hidden = YES;
+                _lbAdd1.hidden = YES;
                 break;
             case 2:
-                _lbAdd2.hidden = NO;
+                _lbAdd2.hidden = YES;
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
@@ -300,62 +270,62 @@
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
-                start.y = 160;
+                start.y = 165;
                 [_iArrow setCenter: start];
                 [UIView commitAnimations];
                 break;
             case 4:
-                _lbAddVal4.hidden = NO;
-                _lbAddVal5.hidden = NO;
+                _lbAddVal4.hidden = YES;
+                _lbAddVal5.hidden = YES;
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
-                start.y = 260;
+                start.y = 250;
                 [_iArrow setCenter: start];
                 [UIView commitAnimations];
                 break;
             case 5:
-                _lbAddVal6.hidden = NO;
+                _lbAddVal6.hidden = YES;
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
-                start.y = 450;
+                start.y = 340;
                 [_iArrow setCenter: start];
                 [UIView commitAnimations];
                 break;
             case 6:
-                _lbAdd4.hidden = NO;
+                _lbAdd4.hidden = YES;
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
-                start.y = 260;
+                start.y = 520;
                 [_iArrow setCenter: start];
                 [UIView commitAnimations];
                 break;
             case 7:
-                _lbAdd5.hidden = NO;
+                _lbAdd5.hidden = YES;
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
-                start.y = 330;
+                start.y = 340;
                 [_iArrow setCenter: start];
                 [UIView commitAnimations];
                 break;
             case 8:
-                _lbAdd6.hidden = NO;
+                _lbAdd6.hidden = YES;
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
-                start.y = 450;
+                start.y = 430;
                 [_iArrow setCenter: start];
                 [UIView commitAnimations];
                 break;
             case 9:
-                _lbAdd3.hidden = NO;
+                _lbAdd3.hidden = YES;
                 [UIView beginAnimations:nil context:NULL];
                 [UIView setAnimationDuration:0.5];
                 start.x = 700;
-                start.y = 160;
+                start.y = 520;
                 [_iArrow setCenter: start];
                 [UIView commitAnimations];
                 break;
@@ -366,7 +336,10 @@
 }
 
 - (void) doSomethingWhenTimeIsUp:(NSTimer*)t {
-    [self animation:@"next"];
+    if(_step != _labelsSize-1)
+        [self animation:@"next"];
+    else
+        [self animation:@"stop"];
 }
 
 //Shows the configuration buttons and modifies
@@ -467,6 +440,54 @@
     _lbAddVal3.text = _tfModifyVar3.text;
     _lbAddVal4.text = _tfModifyFuncVar1.text;
     _lbAddVal5.text = _tfModifyFuncVar2.text;
-    _lbAddVal6.text = _tfModifyFunc.text;
+    _lbAddVal6.text = [NSString stringWithFormat:@"result"];
+}
+
+-(void) setupAndHiding {
+    _animationTimer = nil;
+    _tfModifyVar1.hidden = YES;
+    _tfModifyVar2.hidden = YES;
+    _tfModifyVar3.hidden = YES;
+    _tfModifyFuncVar1.hidden = YES;
+    _tfModifyFuncVar2.hidden = YES;
+    _tfModifyFunc.hidden = YES;
+    _lbAnim1.hidden = YES;
+    _lbAnim2.hidden = YES;
+    _lbAnim3.hidden = YES;
+    _lbAnim4.hidden = YES;
+    _lbAnim5.hidden = YES;
+    _lbAnim6.hidden = YES;
+    _lbAnim7.hidden = YES;
+    _lbAnim8.hidden = YES;
+    _lbAnim9.hidden = YES;
+    _lbAnim10.hidden = YES;
+    _lbAnim11.hidden = YES;
+    _swVar1.hidden = YES;
+    _swVar2.hidden = YES;
+    _configurationFlag = false;
+    _play = false;
+    _step = -1;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    CGPoint start = [_iArrow center];
+    start.x = 700;
+    start.y = 80;
+    [_iArrow setCenter: start];
+    [UIView commitAnimations];
+    
+    _iArrow.hidden = YES;
+    _lbAdd1.hidden = YES;
+    _lbAdd2.hidden = YES;
+    _lbAdd3.hidden = YES;
+    _lbAdd4.hidden = YES;
+    _lbAdd5.hidden = YES;
+    _lbAdd6.hidden = YES;
+    _lbAddVal1.hidden = YES;
+    _lbAddVal2.hidden = YES;
+    _lbAddVal3.hidden = YES;
+    _lbAddVal4.hidden = YES;
+    _lbAddVal5.hidden = YES;
+    _lbAddVal6.hidden = YES;
 }
 @end

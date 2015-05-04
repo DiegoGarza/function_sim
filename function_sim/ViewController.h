@@ -31,6 +31,8 @@
 - (IBAction)btNext:(id)sender;
 - (IBAction)btPlay:(id)sender;
 - (IBAction)btBack:(id)sender;
+- (IBAction)clicksReset:(id)sender;
+
 
 //Variable and function labels
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyVar1;
