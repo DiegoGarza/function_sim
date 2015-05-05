@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>staticValue1</key>
+	<integer>10</integer>
+	<key>staticValue2</key>
+	<integer>20</integer>
 	<key>nomVar1</key>
 	<string>iV1</string>
 	<key>nomVar2</key>

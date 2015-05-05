@@ -395,9 +395,6 @@
                                     <action selector="btBack:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ubi-WS-ewC"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow_right.png" translatesAutoresizingMaskIntoConstraints="NO" id="6wD-d1-WjH">
-                                <rect key="frame" x="650" y="42" width="140" height="74"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVl-Gg-zkg">
                                 <rect key="frame" x="560" y="707" width="35" height="28"/>
                                 <state key="normal" image="forward_to_end_01.png">
@@ -637,7 +634,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Var5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cN-j8-c1D">
-                                <rect key="frame" x="824" y="422" width="34" height="21"/>
+                                <rect key="frame" x="824" y="421" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -649,7 +646,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QI-TU-PsX">
-                                <rect key="frame" x="928" y="421" width="51" height="21"/>
+                                <rect key="frame" x="924" y="421" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -734,6 +731,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6T2-mp-ggs">
+                                <rect key="frame" x="652" y="3" width="110" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow_right.png" translatesAutoresizingMaskIntoConstraints="NO" id="6wD-d1-WjH">
+                                        <rect key="frame" x="16" y="35" width="79" height="74"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.19939630681818177" green="0.19939630681818177" blue="0.19939630681818177" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -873,6 +879,8 @@
                         <outlet property="lbFunc" destination="jFW-3i-MXX" id="MH5-a2-313"/>
                         <outlet property="lbFunc1" destination="OLn-W8-usJ" id="ZyF-iQ-mhq"/>
                         <outlet property="lbFunction" destination="jFW-3i-MXX" id="QUZ-Us-VdK"/>
+                        <outlet property="lbStaticValue1" destination="8fA-Sq-G1f" id="UwR-lK-sf1"/>
+                        <outlet property="lbStaticValue2" destination="B81-6h-dhX" id="5wk-Xp-jnN"/>
                         <outlet property="lbTimer" destination="xMs-Jw-ECh" id="f40-6y-w3a"/>
                         <outlet property="lbVar1" destination="35A-rc-u4a" id="Bym-cI-Mkl"/>
                         <outlet property="lbVar11" destination="6Cy-qr-3Dg" id="0Z8-ji-3dA"/>

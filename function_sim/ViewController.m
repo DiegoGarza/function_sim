@@ -13,9 +13,17 @@
 @property (strong, nonatomic) NSDictionary *config;
 @property (strong, nonatomic) NSMutableArray *labels;
 @property (nonatomic) BOOL play;
+@property (nonatomic) BOOL leftRef;
+@property (nonatomic) BOOL rightRef;
+@property (nonatomic) BOOL bothRef;
 @property (nonatomic) NSInteger step;
 @property (nonatomic) NSInteger timer;
 @property (nonatomic) NSInteger labelsSize;
+@property (nonatomic) NSInteger staticValue1;
+@property (nonatomic) NSInteger staticValue2;
+@property (nonatomic) NSInteger staticValueResult;
+@property (nonatomic) NSInteger staticValueFunction1;
+@property (nonatomic) NSInteger staticValueFunction2;
 @property (nonatomic) NSTimer *animationTimer;
 @end
 
@@ -26,12 +34,22 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //Setup and hiding
+    _leftRef = false;
+    _rightRef = false;
+    _bothRef = false;
     [self setupAndHiding];
     
     _labels = [NSMutableArray arrayWithObjects:_lbAnim1,_lbAnim2,_lbAnim3,_lbAnim4,_lbAnim5,_lbAnim6,_lbAnim7,_lbAnim8,_lbAnim9,_lbAnim10,_lbAnim11, nil];
     _labelsSize = _labels.count;
     
     _timer = 2;
+    
+    //Values of variables
+    _staticValue1=0;
+    _staticValue2=0;
+    _staticValueResult=0;
+    _staticValueFunction1=10;
+    _staticValueFunction2=20;
     
     //Load config from plist
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -45,8 +63,21 @@
     _tfModifyFuncVar2.text = [_config objectForKey:@"nomFuncVar2"];
     _tfModifyFunc.text = [_config objectForKey:@"nomFunc"];
     _swVar1.on = [[_config objectForKey:@"refVar1"] boolValue];
-    _swVar2.on = [[_config objectForKey:@"refVar1"] boolValue];
+    _swVar2.on = [[_config objectForKey:@"refVar2"] boolValue];
     _tfTimer.text = [NSString stringWithFormat:@"%ld", (long) _timer];
+    
+    NSLog(@"%d", _swVar1.on);
+    NSLog(@"%d", _swVar2.on);
+    
+    if(_swVar1.on && _swVar2.on){
+        _bothRef = true;
+    }
+    else if(_swVar1.on){
+        _leftRef = true;
+    }
+    else if(_swVar2.on){
+        _rightRef = true;
+    }
     
     //Set names
     [self setLabelsAndReferences];
@@ -100,99 +131,88 @@
         _step--;
         
         switch (_step) {
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                CGPoint start = [_iArrow center];
-                start.x = 700;
-                //start.y = 42;
-                
-                // if(start.y > 1900){
-                //  start.y = 42;
-                //}
-                //start.y += 90;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
             case -1:
                 break;
             case 0:
                 _lbAddVal1.hidden = NO;
-                 _lbAddVal2.hidden = NO;
+                _lbAddVal2.hidden = NO;
                 _lbAddVal3.hidden = NO;
+                _lbAdd1.hidden = NO;
+                _lbAdd2.hidden = NO;
+                _lbAdd3.hidden = NO;
+                _lbAdd1.text = @"---";
+                _lbAdd2.text = @"---";
+                _lbAdd3.text = @"---";
                 break;
             case 1:
                 _iArrow.hidden = NO;
-                _lbAdd1.hidden = NO;
-                _lbAdd1.text = @"0";
-                _lbAdd3.text = @"30";
-                _lbAdd2.text = @"0";
-                _lbAdd4.text = @"10";
-                _lbAdd5.text = @"20";
-                _lbAdd6.text = @"30";
+                _lbAdd1.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1];
                 break;
             case 2:
-                _lbAdd2.hidden = NO;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 80;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                _lbAdd2.text = [NSString stringWithFormat:@"%ld", (long) _staticValue2];
+                [self makeAnimation:50 y:160];
                 break;
             case 3:
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 160;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                [self makeAnimation:50 y:250];
                 break;
             case 4:
-                _lbAddVal4.hidden = NO;
-                _lbAddVal5.hidden = NO;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 260;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                if(_leftRef){
+                    _lbAddVal5.hidden = NO;
+                    _lbAdd5.text = [NSString stringWithFormat:@"%ld", (long) _staticValue2];
+                    _lbAdd5.hidden = NO;
+                    [self makeAnimation:50 y:430];
+                }
+                else if(_rightRef) {
+                    _lbAddVal4.hidden = NO;
+                    _lbAdd4.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1];
+                    _lbAdd4.hidden = NO;
+                    [self makeAnimation:50 y:340];
+                }
+                else{
+                    _lbAddVal4.hidden = NO;
+                    _lbAddVal5.hidden = NO;
+                    _lbAdd4.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1];
+                    _lbAdd5.text = [NSString stringWithFormat:@"%ld", (long) _staticValue2];
+                    _lbAdd4.hidden = NO;
+                    _lbAdd5.hidden = NO;
+                    [self makeAnimation:50 y:340];
+                }
                 break;
             case 5:
                 _lbAddVal6.hidden = NO;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 450;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                _lbAdd6.text = @"---";
+                _lbAdd6.hidden = NO;
+                [self makeAnimation:50 y:520];
                 break;
             case 6:
-                _lbAdd4.hidden = NO;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 260;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                if(_leftRef){
+                    _lbAdd1.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1 + _staticValueFunction1];
+                    [self makeAnimation:50 y:80];
+                }
+                else{
+                    _lbAdd4.hidden = NO;
+                    _lbAdd4.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1 + _staticValueFunction1];
+                    [self makeAnimation:50 y:340];
+                }
                 break;
             case 7:
-                _lbAdd5.hidden = NO;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 340;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                if(_rightRef){
+                    _lbAdd2.text = [NSString stringWithFormat:@"%ld", (long) _staticValue2 + _staticValueFunction2];
+                    [self makeAnimation:50 y:160];
+                }
+                else {
+                    _lbAdd5.hidden = NO;
+                    _lbAdd5.text = [NSString stringWithFormat:@"%ld", (long) _staticValue2 + _staticValueFunction2];
+                    [self makeAnimation:50 y:430];
+                }
                 break;
             case 8:
-                _lbAdd6.hidden = NO;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 450;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                 _lbAdd6.hidden = NO;
+                _lbAdd6.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1 + _staticValueFunction1 + _staticValueFunction2 + _staticValue2];
+                [self makeAnimation:50 y:520];
                 break;
             case 9:
+                _lbAdd3.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1 + _staticValueFunction1 + _staticValueFunction2 + _staticValue2];
                 _lbAdd3.hidden = NO;
                 _lbAdd4.hidden = YES;
                 _lbAdd5.hidden = YES;
@@ -200,32 +220,10 @@
                 _lbAddVal4.hidden = YES;
                 _lbAddVal5.hidden = YES;
                 _lbAddVal6.hidden = YES;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 170;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                [self makeAnimation:50 y:250];
                 break;
             default:
                 break;
-        }
-        
-        if(_step >= 2 ){
-            
-            [UIView beginAnimations:nil context:NULL];
-            [UIView setAnimationDuration:0.5];
-            // move and adjust views here
-            CGPoint start = [_iArrow center];
-            start.x = 700;
-            start.y += 80;
-            
-          
-            
-            //start.y += 90;
-            [_iArrow setCenter: start];
-            [UIView commitAnimations];
-        
         }
         
         if (_step < 0) {
@@ -247,107 +245,134 @@
         _step--;
         
         switch (_step) {
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                CGPoint start = [_iArrow center];
-                start.x = 700;
-                //start.y = 42;
-                
-                // if(start.y > 1900){
-                //  start.y = 42;
-                //}
-                //start.y += 90;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
-                
             case -1:
                 break;
             case 0:
                 _lbAddVal1.hidden = YES;
                 _lbAddVal2.hidden = YES;
                 _lbAddVal3.hidden = YES;
+                _lbAdd1.hidden = YES;
+                _lbAdd2.hidden = YES;
+                _lbAdd3.hidden = YES;
                 break;
             case 1:
                 _iArrow.hidden = YES;
-                _lbAdd1.hidden = YES;
+                _lbAdd1.hidden = NO;
+                _lbAdd1.text = @"---";
                 break;
             case 2:
-                _lbAdd2.hidden = YES;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 80;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                _lbAdd2.hidden = NO;
+                _lbAdd2.text = @"---";
+                [self makeAnimation:50 y:80];
                 break;
             case 3:
-                _lbAdd3.hidden = YES;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 165;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                _lbAdd3.hidden = NO;
+                _lbAdd3.text = @"---";
+                [self makeAnimation:50 y:165];
                 break;
             case 4:
                 _lbAddVal4.hidden = YES;
                 _lbAddVal5.hidden = YES;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 250;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                _lbAdd4.hidden = YES;
+                _lbAdd5.hidden = YES;
+                [self makeAnimation:50 y:250];
                 break;
             case 5:
-                _lbAddVal6.hidden = YES;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 340;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                if(_leftRef){
+                    _lbAddVal6.hidden = YES;
+                    _lbAdd6.hidden = YES;
+                    [self makeAnimation:50 y:430];
+                }
+                else {
+                    _lbAddVal6.hidden = YES;
+                    _lbAdd6.hidden = YES;
+                    [self makeAnimation:50 y:340];
+                }
                 break;
             case 6:
-                _lbAdd4.hidden = YES;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 520;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                if(_leftRef){
+                    _lbAdd1.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1];
+                    _lbAdd1.hidden = NO;
+                    [self makeAnimation:50 y:520];
+                }
+                else if(_rightRef){
+                    _lbAdd4.hidden = NO;
+                    _lbAdd4.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1];
+                    [self makeAnimation:50 y:520];
+                }
+                else {
+                    _lbAdd4.hidden = NO;
+                    _lbAdd4.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1];
+                    [self makeAnimation:50 y:520];
+                }
                 break;
             case 7:
-                _lbAdd5.hidden = YES;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 340;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                if(_leftRef) {
+                    _lbAdd5.hidden = NO;
+                    _lbAdd5.text = [NSString stringWithFormat:@"%ld", (long) _staticValue2];
+                    [self makeAnimation:50 y:80];
+                }
+                else if(_rightRef){
+                    _lbAdd2.text = [NSString stringWithFormat:@"%ld", (long) _staticValue2];
+                    _lbAdd2.hidden = NO;
+                    [self makeAnimation:50 y:340];
+                }
+                else {
+                    _lbAdd5.hidden = NO;
+                    _lbAdd5.text = [NSString stringWithFormat:@"%ld", (long) _staticValue2];
+                    [self makeAnimation:50 y:340];
+                }
                 break;
             case 8:
-                _lbAdd6.hidden = YES;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 430;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                _lbAdd6.text = @"---";
+                _lbAdd6.hidden = NO;
+                if(_rightRef)
+                    [self makeAnimation:50 y:160];
+                else if(_leftRef)
+                    [self makeAnimation:50 y:430];
                 break;
             case 9:
-                _lbAdd3.hidden = YES;
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.5];
-                start.x = 700;
-                start.y = 520;
-                [_iArrow setCenter: start];
-                [UIView commitAnimations];
+                if(_leftRef){
+                    _lbAdd3.text = @"---";
+                    _lbAdd3.hidden = NO;
+                    _lbAdd5.hidden = NO;
+                    _lbAdd6.hidden = NO;
+                    _lbAddVal5.hidden = NO;
+                    _lbAddVal6.hidden = NO;
+                    [self makeAnimation:50 y:520];
+                }
+                else if(_rightRef){
+                    _lbAdd3.text = @"---";
+                    _lbAdd3.hidden = NO;
+                    _lbAdd4.hidden = NO;
+                    _lbAdd6.hidden = NO;
+                    _lbAddVal4.hidden = NO;
+                    _lbAddVal6.hidden = NO;
+                    [self makeAnimation:50 y:520];
+                }
+                else {
+                    _lbAdd3.text = @"---";
+                    _lbAdd3.hidden = NO;
+                    _lbAdd4.hidden = NO;
+                    _lbAdd5.hidden = NO;
+                    _lbAdd6.hidden = NO;
+                    _lbAddVal4.hidden = NO;
+                    _lbAddVal5.hidden = NO;
+                    _lbAddVal6.hidden = NO;
+                    [self makeAnimation:50 y:520];
+                }
                 break;
             default:
                 break;
         }
     }
+}
+
+-(void) makeAnimation:(int)x y:(int)y{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.iArrow.center = CGPointMake(x, y);
+    } completion:^(BOOL finished){
+    }];
 }
 
 - (void) doSomethingWhenTimeIsUp:(NSTimer*)t {
@@ -371,6 +396,7 @@
         _tfModifyFunc.hidden = NO;
         _swVar1.hidden = NO;
         _swVar2.hidden = NO;
+        _configurationFlag = true;
         [_btConfiguration setTitle:@"Done" forState:UIControlStateNormal];
     }
     //Hide controls and modify
@@ -395,6 +421,20 @@
         [plist writeToFile:docfilePath atomically:YES];
         _timer = [_tfTimer.text integerValue];
         
+        _bothRef = false;
+        _leftRef = false;
+        _rightRef = false;
+        
+        if(_swVar1.on && _swVar2.on){
+            _bothRef = true;
+        }
+        else if(_swVar1.on){
+            _leftRef = true;
+        }
+        else if(_swVar2.on){
+            _rightRef = true;
+        }
+        
         //Hide config
         _tfTimer.hidden = YES;
         _lbTimer.hidden = YES;
@@ -406,9 +446,10 @@
         _tfModifyFunc.hidden = YES;
         _swVar1.hidden = YES;
         _swVar2.hidden = YES;
+        [self setupAndHiding];
         [_btConfiguration setTitle:@"Configuration" forState:UIControlStateNormal];
+        _configurationFlag = false;
     }
-    _configurationFlag = !_configurationFlag;
 }
 
 - (void) setLabelsAndReferences {
@@ -493,7 +534,7 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5];
     CGPoint start = [_iArrow center];
-    start.x = 700;
+    start.x = 50;
     start.y = 80;
     [_iArrow setCenter: start];
     [UIView commitAnimations];

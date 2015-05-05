@@ -34,6 +34,12 @@
 - (IBAction)btBack:(id)sender;
 - (IBAction)clicksReset:(id)sender;
 
+//Static values
+@property (strong, nonatomic) IBOutlet UITextField *tfStaticValue1;
+@property (strong, nonatomic) IBOutlet UITextField *tfStaticValue2;
+@property (strong, nonatomic) IBOutlet UILabel *lbStaticValue1;
+@property (strong, nonatomic) IBOutlet UILabel *lbStaticValue2;
+
 
 //Variable and function labels
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyVar1;
