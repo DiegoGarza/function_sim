@@ -66,9 +66,6 @@
     _swVar2.on = [[_config objectForKey:@"refVar2"] boolValue];
     _tfTimer.text = [NSString stringWithFormat:@"%ld", (long) _timer];
     
-    NSLog(@"%d", _swVar1.on);
-    NSLog(@"%d", _swVar2.on);
-    
     if(_swVar1.on && _swVar2.on){
         _bothRef = true;
     }
@@ -168,6 +165,9 @@
                     _lbAdd4.hidden = NO;
                     [self makeAnimation:50 y:340];
                 }
+                else if(_bothRef){
+                    
+                }
                 else{
                     _lbAddVal4.hidden = NO;
                     _lbAddVal5.hidden = NO;
@@ -189,6 +189,10 @@
                     _lbAdd1.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1 + _staticValueFunction1];
                     [self makeAnimation:50 y:80];
                 }
+                else if(_bothRef){
+                    _lbAdd1.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1 + _staticValueFunction1];
+                    [self makeAnimation:50 y:80];
+                }
                 else{
                     _lbAdd4.hidden = NO;
                     _lbAdd4.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1 + _staticValueFunction1];
@@ -197,6 +201,10 @@
                 break;
             case 7:
                 if(_rightRef){
+                    _lbAdd2.text = [NSString stringWithFormat:@"%ld", (long) _staticValue2 + _staticValueFunction2];
+                    [self makeAnimation:50 y:160];
+                }
+                else if (_bothRef){
                     _lbAdd2.text = [NSString stringWithFormat:@"%ld", (long) _staticValue2 + _staticValueFunction2];
                     [self makeAnimation:50 y:160];
                 }
@@ -283,6 +291,11 @@
                     _lbAdd6.hidden = YES;
                     [self makeAnimation:50 y:430];
                 }
+                else if(_bothRef){
+                    _lbAddVal6.hidden = YES;
+                    _lbAdd6.hidden = YES;
+                    [self makeAnimation:50 y:250];
+                }
                 else {
                     _lbAddVal6.hidden = YES;
                     _lbAdd6.hidden = YES;
@@ -298,6 +311,11 @@
                 else if(_rightRef){
                     _lbAdd4.hidden = NO;
                     _lbAdd4.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1];
+                    [self makeAnimation:50 y:520];
+                }
+                else if(_bothRef){
+                    _lbAdd1.text = [NSString stringWithFormat:@"%ld", (long) _staticValue1];
+                    _lbAdd1.hidden = NO;
                     [self makeAnimation:50 y:520];
                 }
                 else {
@@ -317,6 +335,11 @@
                     _lbAdd2.hidden = NO;
                     [self makeAnimation:50 y:340];
                 }
+                else if(_bothRef){
+                    _lbAdd2.text = [NSString stringWithFormat:@"%ld", (long) _staticValue2];
+                    _lbAdd2.hidden = NO;
+                    [self makeAnimation:50 y:80];
+                }
                 else {
                     _lbAdd5.hidden = NO;
                     _lbAdd5.text = [NSString stringWithFormat:@"%ld", (long) _staticValue2];
@@ -329,6 +352,10 @@
                 if(_rightRef)
                     [self makeAnimation:50 y:160];
                 else if(_leftRef)
+                    [self makeAnimation:50 y:430];
+                else if(_bothRef)
+                    [self makeAnimation:50 y:160];
+                else
                     [self makeAnimation:50 y:430];
                 break;
             case 9:
@@ -347,6 +374,13 @@
                     _lbAdd4.hidden = NO;
                     _lbAdd6.hidden = NO;
                     _lbAddVal4.hidden = NO;
+                    _lbAddVal6.hidden = NO;
+                    [self makeAnimation:50 y:520];
+                }
+                else if(_bothRef){
+                    _lbAdd3.text = @"---";
+                    _lbAdd3.hidden = NO;
+                    _lbAdd6.hidden = NO;
                     _lbAddVal6.hidden = NO;
                     [self makeAnimation:50 y:520];
                 }
@@ -378,8 +412,10 @@
 - (void) doSomethingWhenTimeIsUp:(NSTimer*)t {
     if(_step != _labelsSize-1)
         [self animation:@"next"];
-    else
+    else {
+        _play = false;
         [self animation:@"stop"];
+    }
 }
 
 //Shows the configuration buttons and modifies
