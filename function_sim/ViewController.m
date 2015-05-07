@@ -92,10 +92,14 @@
 
 - (IBAction)btPlay:(id)sender {
     if(!_play){
+        [sender setImage:[UIImage imageNamed:@"pause@2x.png"] forState:UIControlStateSelected];
+        [sender setSelected:YES];
         _play = true;
         [self animation:@"go"];
     }
     else {
+        [sender setImage:[UIImage imageNamed:@"play@2x.png"] forState:UIControlStateNormal];
+        [sender setSelected:NO];
         _play = false;
         [self animation:@"stop"];
     }
@@ -413,6 +417,7 @@
     if(_step != _labelsSize-1)
         [self animation:@"next"];
     else {
+        [self btPlay:_btPlay];
         _play = false;
         [self animation:@"stop"];
     }

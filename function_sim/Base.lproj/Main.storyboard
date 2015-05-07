@@ -851,6 +851,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="btConfiguration" destination="Oh9-7u-N2y" id="XyH-kQ-gbV"/>
+                        <outlet property="btPlay" destination="czF-1y-bx7" id="wgv-y5-y0L"/>
                         <outlet property="iArrow" destination="6wD-d1-WjH" id="JgQ-3d-dMe"/>
                         <outlet property="iMemory" destination="iox-L4-z46" id="p3w-Ik-3wz"/>
                         <outlet property="lbAdd1" destination="Yu0-Ju-eeb" id="MyO-J0-vK3"/>

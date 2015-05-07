@@ -28,7 +28,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbAdd6;
 @property (strong, nonatomic) IBOutlet UILabel *lbTimer;
 
-
+@property (strong, nonatomic) IBOutlet UIButton *btPlay;
 - (IBAction)btNext:(id)sender;
 - (IBAction)btPlay:(id)sender;
 - (IBAction)btBack:(id)sender;
