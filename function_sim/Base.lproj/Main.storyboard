@@ -232,7 +232,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="int" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RU2-XA-2rU">
-                                <rect key="frame" x="22" y="274" width="42" height="22"/>
+                                <rect key="frame" x="22" y="272" width="42" height="22"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.88960408209999997" blue="0.64254102040000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -745,8 +745,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZC1-2J-4tn">
+                                <rect key="frame" x="272" y="105" width="51" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JDO-Wk-0A9">
                                 <rect key="frame" x="178" y="388" width="50" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ps4-BM-eh3">
+                                <rect key="frame" x="272" y="136" width="51" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
@@ -776,6 +786,7 @@
                             <constraint firstItem="DXn-nY-ZdV" firstAttribute="leading" secondItem="q5t-Se-6Pf" secondAttribute="trailing" constant="5" id="AVN-g3-Vq6"/>
                             <constraint firstItem="GTP-sQ-gdZ" firstAttribute="leading" secondItem="qGf-RV-mce" secondAttribute="trailing" constant="14" id="BZX-p2-4DP"/>
                             <constraint firstItem="nn9-HF-qZc" firstAttribute="leading" secondItem="WZb-L9-Def" secondAttribute="trailing" constant="2" id="BmN-ni-tzE"/>
+                            <constraint firstItem="ZC1-2J-4tn" firstAttribute="leading" secondItem="8fA-Sq-G1f" secondAttribute="trailing" constant="8" id="Bs4-bp-Wfx"/>
                             <constraint firstItem="pws-gL-S9I" firstAttribute="leading" secondItem="NMp-MK-eVh" secondAttribute="trailing" constant="5" id="CDq-at-dQj"/>
                             <constraint firstItem="FRQ-4P-LEJ" firstAttribute="leading" secondItem="5Jd-i4-2HE" secondAttribute="trailing" id="CEu-cg-Pv0"/>
                             <constraint firstItem="Xub-En-lhb" firstAttribute="leading" secondItem="LpA-77-LJ5" secondAttribute="trailing" constant="12" id="CFb-Dh-Nfx"/>
@@ -834,6 +845,7 @@
                             <constraint firstItem="Ddx-XV-7HS" firstAttribute="leading" secondItem="qJf-Df-qBE" secondAttribute="trailing" id="hAa-7c-02c"/>
                             <constraint firstItem="nn9-HF-qZc" firstAttribute="leading" secondItem="WZb-L9-Def" secondAttribute="trailing" constant="2" id="ifP-k9-LFH"/>
                             <constraint firstItem="6Cy-qr-3Dg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="53" id="jD2-Ow-nYH"/>
+                            <constraint firstItem="ps4-BM-eh3" firstAttribute="leading" secondItem="B81-6h-dhX" secondAttribute="trailing" constant="8" id="jvF-55-0AI"/>
                             <constraint firstItem="4zI-hm-mPY" firstAttribute="leading" secondItem="iVs-j9-bV2" secondAttribute="trailing" constant="5" id="k8z-F3-P4j"/>
                             <constraint firstItem="gvH-ZQ-nqs" firstAttribute="leading" secondItem="Xub-En-lhb" secondAttribute="trailing" constant="11" id="kPE-Ul-6Ay"/>
                             <constraint firstItem="unY-Br-7au" firstAttribute="leading" secondItem="pg5-oS-lCF" secondAttribute="trailing" constant="1" id="kuC-ox-XSr"/>
@@ -921,6 +933,8 @@
                         <outlet property="tfModifyVar1" destination="VPD-OZ-jit" id="15q-zh-wdn"/>
                         <outlet property="tfModifyVar2" destination="U0z-Et-JmU" id="mFM-qa-udE"/>
                         <outlet property="tfModifyVar3" destination="bxX-aI-TTP" id="7he-Yn-Ac5"/>
+                        <outlet property="tfStaticValue1" destination="ZC1-2J-4tn" id="BqT-BW-9Vm"/>
+                        <outlet property="tfStaticValue2" destination="ps4-BM-eh3" id="xtc-rx-NLz"/>
                         <outlet property="tfStaticVarValue1" destination="pws-gL-S9I" id="z0b-Wy-1PL"/>
                         <outlet property="tfStaticVarValue2" destination="JDO-Wk-0A9" id="TvP-1b-s0B"/>
                         <outlet property="tfTimer" destination="Z6V-Wb-kBh" id="VzF-MR-LSr"/>
