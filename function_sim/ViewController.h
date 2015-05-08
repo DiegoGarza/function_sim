@@ -41,6 +41,12 @@
 @property (strong, nonatomic) IBOutlet UILabel *lbStaticValue2;
 
 
+@property (strong, nonatomic) IBOutlet UITextField *tfStaticVarValue1;
+@property (strong, nonatomic) IBOutlet UITextField *tfStaticVarValue2;
+@property (strong, nonatomic) IBOutlet UILabel *lbStaticVarValue1;
+@property (strong, nonatomic) IBOutlet UILabel *lbStaticVarValue2;
+
+
 //Variable and function labels
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyVar1;
 @property (strong, nonatomic) IBOutlet UITextField *tfModifyVar2;

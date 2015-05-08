@@ -44,13 +44,6 @@
     
     _timer = 2;
     
-    //Values of variables
-    _staticValue1=0;
-    _staticValue2=0;
-    _staticValueResult=0;
-    _staticValueFunction1=10;
-    _staticValueFunction2=20;
-    
     //Load config from plist
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
@@ -61,10 +54,14 @@
     _tfModifyVar3.text = [_config objectForKey:@"nomVar3"];
     _tfModifyFuncVar1.text = [_config objectForKey:@"nomFuncVar1"];
     _tfModifyFuncVar2.text = [_config objectForKey:@"nomFuncVar2"];
+    _tfStaticVarValue1.text = [_config objectForKey:@"staticVarValue1"];
+    _tfStaticVarValue2.text = [_config objectForKey:@"staticVarValue2"];
     _tfModifyFunc.text = [_config objectForKey:@"nomFunc"];
     _swVar1.on = [[_config objectForKey:@"refVar1"] boolValue];
     _swVar2.on = [[_config objectForKey:@"refVar2"] boolValue];
     _tfTimer.text = [NSString stringWithFormat:@"%ld", (long) _timer];
+    
+    NSLog(@"%@", docfilePath);
     
     if(_swVar1.on && _swVar2.on){
         _bothRef = true;
@@ -445,6 +442,8 @@
         _tfModifyFunc.hidden = NO;
         _swVar1.hidden = NO;
         _swVar2.hidden = NO;
+        _tfStaticVarValue1.hidden = NO;
+        _tfStaticVarValue2.hidden = NO;
         _configurationFlag = true;
         [_btConfiguration setTitle:@"Done" forState:UIControlStateNormal];
     }
@@ -464,6 +463,8 @@
         [plist setObject:_tfModifyVar3.text forKey:@"nomVar3"];
         [plist setObject:_tfModifyFuncVar1.text forKey:@"nomFuncVar1"];
         [plist setObject:_tfModifyFuncVar2.text forKey:@"nomFuncVar2"];
+        [plist setObject:_tfStaticVarValue1.text forKey:@"staticVarValue1"];
+        [plist setObject:_tfStaticVarValue2.text forKey:@"staticVarValue2"];
         [plist setObject:_tfModifyFunc.text forKey:@"nomFunc"];
         [plist setObject:[NSNumber numberWithBool:_swVar1.isOn] forKey:@"refVar1"];
         [plist setObject:[NSNumber numberWithBool:_swVar2.isOn] forKey:@"refVar2"];
@@ -492,6 +493,8 @@
         _tfModifyVar3.hidden = YES;
         _tfModifyFuncVar1.hidden = YES;
         _tfModifyFuncVar2.hidden = YES;
+        _tfStaticVarValue1.hidden = YES;
+        _tfStaticVarValue2.hidden = YES;
         _tfModifyFunc.hidden = YES;
         _swVar1.hidden = YES;
         _swVar2.hidden = YES;
@@ -516,6 +519,13 @@
     else {
         _lbVar23.text = _tfModifyFuncVar2.text;
     }
+    
+    //Values of variables
+    _staticValue1=[_tfStaticVarValue1.text integerValue];
+    _staticValue2=[_tfStaticVarValue2.text integerValue];
+    _staticValueResult=0;
+    _staticValueFunction1=10;
+    _staticValueFunction2=20;
     
     //Main var1
     _lbVar1.text = _tfModifyVar1.text;
@@ -544,6 +554,10 @@
     //Function name
     _lbFunc.text = _tfModifyFunc.text;
     _lbFunc1.text = _tfModifyFunc.text;
+    
+    //Static Variable values
+    _lbStaticVarValue1.text = [NSString stringWithFormat:@"= %ld;", (long) [_tfStaticVarValue1.text integerValue]];
+    _lbStaticVarValue2.text = [NSString stringWithFormat:@"= %ld;", (long) [_tfStaticVarValue2.text integerValue]];
     
     _lbAddVal1.text = _tfModifyVar1.text;
     _lbAddVal2.text = _tfModifyVar2.text;
@@ -588,6 +602,8 @@
     [_iArrow setCenter: start];
     [UIView commitAnimations];
     
+    _tfStaticVarValue1.hidden = YES;
+    _tfStaticVarValue2.hidden = YES;
     _iArrow.hidden = YES;
     _lbAdd1.hidden = YES;
     _lbAdd2.hidden = YES;
