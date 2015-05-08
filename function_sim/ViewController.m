@@ -44,33 +44,68 @@
     
     _timer = 2;
     
-    //Load config from plist
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
-    NSString *docfilePath = [basePath stringByAppendingPathComponent:@"Property List.plist"];
-    self.config = [[NSDictionary alloc] initWithContentsOfFile: docfilePath];
-    _tfModifyVar1.text = [_config objectForKey:@"nomVar1"];
-    _tfModifyVar2.text = [_config objectForKey:@"nomVar2"];
-    _tfModifyVar3.text = [_config objectForKey:@"nomVar3"];
-    _tfModifyFuncVar1.text = [_config objectForKey:@"nomFuncVar1"];
-    _tfModifyFuncVar2.text = [_config objectForKey:@"nomFuncVar2"];
-    _tfStaticValue1.text = [_config objectForKey:@"staticValue1"];
-    _tfStaticValue2.text = [_config objectForKey:@"staticValue2"];
-    _tfStaticVarValue1.text = [_config objectForKey:@"staticVarValue1"];
-    _tfStaticVarValue2.text = [_config objectForKey:@"staticVarValue2"];
-    _tfModifyFunc.text = [_config objectForKey:@"nomFunc"];
-    _swVar1.on = [[_config objectForKey:@"refVar1"] boolValue];
-    _swVar2.on = [[_config objectForKey:@"refVar2"] boolValue];
-    _tfTimer.text = [NSString stringWithFormat:@"%ld", (long) _timer];
+    //Load from initial plist if it's the first time the app is running
+    static NSString* const hasRunAppOnceKey = @"hasRunAppOnceKey";
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults boolForKey:hasRunAppOnceKey] == NO)
+    {
+        NSString *pathPlist = [ [NSBundle mainBundle] pathForResource: @"Property List" ofType: @"plist"];
+        self.config = [[NSDictionary alloc] initWithContentsOfFile: pathPlist];
+        _tfModifyVar1.text = [_config objectForKey:@"nomVar1"];
+        _tfModifyVar2.text = [_config objectForKey:@"nomVar2"];
+        _tfModifyVar3.text = [_config objectForKey:@"nomVar3"];
+        _tfModifyFuncVar1.text = [_config objectForKey:@"nomFuncVar1"];
+        _tfModifyFuncVar2.text = [_config objectForKey:@"nomFuncVar2"];
+        _tfStaticValue1.text = [_config objectForKey:@"staticValue1"];
+        _tfStaticValue2.text = [_config objectForKey:@"staticValue2"];
+        _tfStaticVarValue1.text = [_config objectForKey:@"staticVarValue1"];
+        _tfStaticVarValue2.text = [_config objectForKey:@"staticVarValue2"];
+        _tfModifyFunc.text = [_config objectForKey:@"nomFunc"];
+        _swVar1.on = [[_config objectForKey:@"refVar1"] boolValue];
+        _swVar2.on = [[_config objectForKey:@"refVar2"] boolValue];
+        _tfTimer.text = [NSString stringWithFormat:@"%ld", (long) _timer];
+        
+        if(_swVar1.on && _swVar2.on){
+            _bothRef = true;
+        }
+        else if(_swVar1.on){
+            _leftRef = true;
+        }
+        else if(_swVar2.on){
+            _rightRef = true;
+        }
+        [defaults setBool:YES forKey:hasRunAppOnceKey];
+    }
     
-    if(_swVar1.on && _swVar2.on){
-        _bothRef = true;
-    }
-    else if(_swVar1.on){
-        _leftRef = true;
-    }
-    else if(_swVar2.on){
-        _rightRef = true;
+    else {
+        //Load config from plist
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+        NSString *docfilePath = [basePath stringByAppendingPathComponent:@"Property List.plist"];
+        self.config = [[NSDictionary alloc] initWithContentsOfFile: docfilePath];
+        _tfModifyVar1.text = [_config objectForKey:@"nomVar1"];
+        _tfModifyVar2.text = [_config objectForKey:@"nomVar2"];
+        _tfModifyVar3.text = [_config objectForKey:@"nomVar3"];
+        _tfModifyFuncVar1.text = [_config objectForKey:@"nomFuncVar1"];
+        _tfModifyFuncVar2.text = [_config objectForKey:@"nomFuncVar2"];
+        _tfStaticValue1.text = [_config objectForKey:@"staticValue1"];
+        _tfStaticValue2.text = [_config objectForKey:@"staticValue2"];
+        _tfStaticVarValue1.text = [_config objectForKey:@"staticVarValue1"];
+        _tfStaticVarValue2.text = [_config objectForKey:@"staticVarValue2"];
+        _tfModifyFunc.text = [_config objectForKey:@"nomFunc"];
+        _swVar1.on = [[_config objectForKey:@"refVar1"] boolValue];
+        _swVar2.on = [[_config objectForKey:@"refVar2"] boolValue];
+        _tfTimer.text = [NSString stringWithFormat:@"%ld", (long) _timer];
+        
+        if(_swVar1.on && _swVar2.on){
+            _bothRef = true;
+        }
+        else if(_swVar1.on){
+            _leftRef = true;
+        }
+        else if(_swVar2.on){
+            _rightRef = true;
+        }
     }
     
     //Set names
