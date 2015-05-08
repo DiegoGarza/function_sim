@@ -285,7 +285,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="{" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-JH-cIQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="{" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-JH-cIQ">
                                 <rect key="frame" x="22" y="297" width="26" height="31"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -723,7 +723,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6V-Wb-kBh">
                                 <rect key="frame" x="614" y="622" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set timer in seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMs-Jw-ECh">
                                 <rect key="frame" x="583" y="593" width="158" height="21"/>
@@ -750,6 +750,7 @@
                             <constraint firstItem="unY-Br-7au" firstAttribute="leading" secondItem="AH0-tO-bj8" secondAttribute="trailing" constant="1" id="3ia-A6-AFW"/>
                             <constraint firstItem="OLn-W8-usJ" firstAttribute="leading" secondItem="WOV-2e-onR" secondAttribute="trailing" constant="14" id="3sE-si-EZE"/>
                             <constraint firstItem="I7N-0e-WMI" firstAttribute="leading" secondItem="uCo-kI-NTI" secondAttribute="trailing" constant="1" id="44c-hS-D8j"/>
+                            <constraint firstItem="CR7-93-KPU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="49" id="4Fe-tV-KsX"/>
                             <constraint firstItem="gRp-TV-cDb" firstAttribute="leading" secondItem="Pbm-jW-nup" secondAttribute="trailing" constant="1" id="5bu-9F-XpA"/>
                             <constraint firstItem="mC7-oC-yff" firstAttribute="leading" secondItem="ZDI-pX-q7t" secondAttribute="trailing" constant="2" id="6ly-tO-CCQ"/>
                             <constraint firstItem="8oe-SC-cme" firstAttribute="leading" secondItem="WOV-2e-onR" secondAttribute="trailing" constant="11" id="88O-91-eWy"/>
@@ -828,7 +829,6 @@
                             <constraint firstItem="4zI-hm-mPY" firstAttribute="leading" secondItem="NMp-MK-eVh" secondAttribute="trailing" constant="5" id="p6n-at-2J1"/>
                             <constraint firstItem="4Jf-0y-qKq" firstAttribute="leading" secondItem="Ssg-j7-blV" secondAttribute="trailing" constant="8" id="pFZ-N4-Ovp"/>
                             <constraint firstItem="eWm-gX-3Kn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="52" id="rBw-XM-qoY"/>
-                            <constraint firstItem="CR7-93-KPU" firstAttribute="leading" secondItem="dBQ-JH-cIQ" secondAttribute="trailing" constant="17" id="reW-yT-HU2"/>
                             <constraint firstItem="WZb-L9-Def" firstAttribute="leading" secondItem="jFW-3i-MXX" secondAttribute="trailing" id="rpr-WT-nhf"/>
                             <constraint firstItem="AH0-tO-bj8" firstAttribute="leading" secondItem="2MC-Rx-G6t" secondAttribute="trailing" constant="1" id="sg0-4H-FpJ"/>
                             <constraint firstItem="R4O-Jd-RRQ" firstAttribute="leading" secondItem="nn9-HF-qZc" secondAttribute="trailing" constant="8" id="srd-4G-Gcg"/>
