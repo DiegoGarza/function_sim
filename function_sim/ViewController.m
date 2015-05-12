@@ -74,7 +74,6 @@
         else if(_swVar2.on){
             _rightRef = true;
         }
-        [defaults setBool:YES forKey:hasRunAppOnceKey];
     }
     
     else {
@@ -488,6 +487,11 @@
     else {
         //Modify names
         [self setLabelsAndReferences];
+        
+        //Save first change
+        static NSString* const hasRunAppOnceKey = @"hasRunAppOnceKey";
+        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setBool:YES forKey:hasRunAppOnceKey];
         
         //Modify plist
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Property List" ofType:@"plist"];
